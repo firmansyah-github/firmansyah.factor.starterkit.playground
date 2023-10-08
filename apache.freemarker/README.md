@@ -11,13 +11,12 @@ Below, you'll find screenshots from within the "Apache FreeMarker.xmind" file:
 ![Apache FreeMarker 2.3.26](https://github.com/firmansyah-github/firmansyah.factor.starterkit.playground/blob/master/apache.freemarker/images/Apache%20FreeMarker%202.3.26.png)
 
 2. We recommend focusing on the Template Author Guide, which includes Predefined Directives and Predefined Subroutines:
-![Predefined Directives](./apache.freemarker/images/Predefined%20Directives.png)
-
-![Predefined Subroutines](./apache.freemarker/images/Predefined%20Subroutines.png)
+![Predefined Directives](https://github.com/firmansyah-github/firmansyah.factor.starterkit.playground/blob/master/apache.freemarker/images/Predefined%20Directives.png)
+![Predefined Subroutines](https://github.com/firmansyah-github/firmansyah.factor.starterkit.playground/blob/master/apache.freemarker/images/Predefined%20Subroutines.png)
 
 
 ## How to Install XMind and Open "Apache FreeMarker.xmind"
-For a detailed tutorial on installing XMind and accessing the "Apache FreeMarker.xmind" file, please refer to the README.md file located at ./apache.freemarker/xmind/README.md.
+For a detailed tutorial on installing XMind and accessing the "Apache FreeMarker.xmind" file, please refer to the README.md file located at [./apache.freemarker/xmind/README.md](https://github.com/firmansyah-github/firmansyah.factor.starterkit.playground/blob/master/apache.freemarker/xmind/README.md).
 
 ## View "Apache FreeMarker.xmind" the Mind Map: 
 Once you open the XMind file ("Apache FreeMarker.xmind"), you'll see the mind map or diagram in the XMind workspace. You can zoom in and out, pan, expand or collapse the Branch or sub Branch, and interact with the elements on the mind map. 
