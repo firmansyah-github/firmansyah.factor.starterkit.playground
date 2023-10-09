@@ -55,6 +55,6 @@ In Eclipse, you can easily import snippet XML files to streamline your coding ta
    - Once you've imported the XML file, you'll see the snippets it contains displayed in the Snippets view.
 
 6. **Use Imported Snippets**:
-   - To use an imported snippet, simply drag and drop it from the Snippets view into your source code file at the location where you want to insert it.
+   - To use an imported snippet, simply drag and drop it from the Snippets view into your source code file (FreeMarker template file) at the location where you want to insert it.
 
 Please note that the specific steps may vary slightly depending on the version of Eclipse you're using, but the general process for importing snippets from XML files remains consistent across Eclipse IDE versions that support snippets.
