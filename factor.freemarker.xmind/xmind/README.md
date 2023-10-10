@@ -67,10 +67,10 @@ Follow these steps to install XMind:
 ## Step 5: Open Apache FreeMarker.xmind 
 1. To open an Apache FreeMarker.xmind file, launch XMind first.
 2. In XMind, go to "File" in the top menu and select "Open."
-3. Navigate to the location of your Apache FreeMarker.xmind file (./apache.freemarker/xmind/Apache FreeMarker.xmind) and select it.
+3. Navigate to the location of your Apache FreeMarker.xmind file (./factor.freemarker.xmind/xmind/Apache FreeMarker.xmind) and select it.
 4. XMind will open the file, and you can now work with it. 
 
 
 ### Conclusion
-You have successfully installed XMind on your computer and learned how to open an Apache FreeMarker.xmind file. Enjoy using XMind to visualize your thoughts, brainstorm ideas, and improve your productivity.
+You have successfully installed XMind on your computer and learned how to open an Apache FreeMarker.xmind file.
    
