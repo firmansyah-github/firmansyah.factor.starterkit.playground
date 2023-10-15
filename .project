@@ -14,4 +14,16 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>Factor - User Defined Subroutines - Example.ftl</name>
+			<type>1</type>
+			<location>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/Factor - User Defined Subroutines - Example.ftl</location>
+		</link>
+		<link>
+			<name>factor.directives.1.ftl.outputformat.comment.ftl</name>
+			<type>1</type>
+			<location>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.1.ftl.outputformat.comment.ftl</location>
+		</link>
+	</linkedResources>
 </projectDescription>

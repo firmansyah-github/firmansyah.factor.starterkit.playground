@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:advCrudGenDomain buildDate="2023-10-15+07:00" xmlns:ns2="http://firmansyah.net/firmansyah-mapping">
+    <generation>
+        <rootDir>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</rootDir>
+        <specifyTemplateDir>false</specifyTemplateDir>
+        <templateDir>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example</templateDir>
+    </generation>
+    <database>
+        <profileName>New PostgreSQL Quarkus</profileName>
+        <catalog>postgres</catalog>
+        <name>New PostgreSQL Quarkus</name>
+        <schema>public</schema>
+        <tablePattern>%</tablePattern>
+        <tableType>TABLE</tableType>
+    </database>
+    <entities>
+        <tableName>articles</tableName>
+        <baseName>articles</baseName>
+        <allFieldSelection>true</allFieldSelection>
+        <create>true</create>
+        <selected>false</selected>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="1" fieldType="java.lang.String" fieldName="id" columnSize="255" columnType="varchar" columnName="id" autoincrement="false" ordinalPosition="1" columnDataType="12" unique="true"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="description" columnSize="255" columnType="varchar" columnName="description" autoincrement="false" ordinalPosition="3" columnDataType="12" unique="false"/>
+        <exportedKeys pkTableName="articles" pkBaseName="articles" pkColumnName="id" fkTableName="favorite_relationship" fkBaseName="favoriteRelationship" fkColumnName="article_id" fkSequence="1" updateRule="3" deleteRule="3" fkName="fkowosoel7w8ribsbbat1ph4u7s" pkName="articles_pkey" create="true" exported="true"/>
+        <exportedKeys pkTableName="articles" pkBaseName="articles" pkColumnName="id" fkTableName="tag_relationship" fkBaseName="tagRelationship" fkColumnName="article_id" fkSequence="1" updateRule="3" deleteRule="3" fkName="fkqmgfrtorm00goskaw7w08x8o3" pkName="articles_pkey" create="true" exported="true"/>
+        <exportedKeys pkTableName="articles" pkBaseName="articles" pkColumnName="id" fkTableName="comments" fkBaseName="comments" fkColumnName="article_id" fkSequence="1" updateRule="3" deleteRule="3" fkName="fkf64h7ce877ohr18431t5oqcit" pkName="articles_pkey" create="true" exported="true"/>
+        <importedKeys pkTableName="users" pkBaseName="users" pkColumnName="id" fkTableName="articles" fkBaseName="articles" fkColumnName="author_id" fkSequence="1" updateRule="3" deleteRule="3" fkName="fkjnt23nr1d7wt0sjl2dof5mip5" pkName="users_pkey" create="true" exported="false"/>
+    </entities>
+    <entities>
+        <tableName>comments</tableName>
+        <baseName>comments</baseName>
+        <allFieldSelection>true</allFieldSelection>
+        <create>true</create>
+        <selected>false</selected>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="body" columnSize="255" columnType="varchar" columnName="body" autoincrement="false" ordinalPosition="2" columnDataType="12" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.sql.Timestamp" fieldName="createdat" columnSize="29" columnType="timestamp" columnName="createdat" autoincrement="false" ordinalPosition="3" columnDataType="93" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="1" fieldType="java.lang.String" fieldName="id" columnSize="255" columnType="varchar" columnName="id" autoincrement="false" ordinalPosition="1" columnDataType="12" unique="true"/>
+        <importedKeys pkTableName="users" pkBaseName="users" pkColumnName="id" fkTableName="comments" fkBaseName="comments" fkColumnName="author_id" fkSequence="1" updateRule="3" deleteRule="3" fkName="fkbr9p7rllqhrjo97rucg45lhfx" pkName="users_pkey" create="true" exported="false"/>
+        <importedKeys pkTableName="articles" pkBaseName="articles" pkColumnName="id" fkTableName="comments" fkBaseName="comments" fkColumnName="article_id" fkSequence="1" updateRule="3" deleteRule="3" fkName="fkf64h7ce877ohr18431t5oqcit" pkName="articles_pkey" create="true" exported="false"/>
+    </entities>
+    <entities>
+        <tableName>favorite_relationship</tableName>
+        <baseName>favoriteRelationship</baseName>
+        <allFieldSelection>true</allFieldSelection>
+        <create>true</create>
+        <selected>false</selected>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="1" fieldType="java.lang.String" fieldName="articleId" columnSize="255" columnType="varchar" columnName="article_id" autoincrement="false" ordinalPosition="2" columnDataType="12" unique="true"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="2" fieldType="java.lang.String" fieldName="userId" columnSize="255" columnType="varchar" columnName="user_id" autoincrement="false" ordinalPosition="1" columnDataType="12" unique="true"/>
+        <importedKeys pkTableName="users" pkBaseName="users" pkColumnName="id" fkTableName="favorite_relationship" fkBaseName="favoriteRelationship" fkColumnName="user_id" fkSequence="1" updateRule="3" deleteRule="3" fkName="fkvcypov2wfc5kmf5ooyot03nw" pkName="users_pkey" create="true" exported="false"/>
+        <importedKeys pkTableName="articles" pkBaseName="articles" pkColumnName="id" fkTableName="favorite_relationship" fkBaseName="favoriteRelationship" fkColumnName="article_id" fkSequence="1" updateRule="3" deleteRule="3" fkName="fkowosoel7w8ribsbbat1ph4u7s" pkName="articles_pkey" create="true" exported="false"/>
+    </entities>
+    <fileTmplts>
+        <allFileAttrSelected>true</allFileAttrSelected>
+        <create>true</create>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH||Private System placeholder for create generated relative path" desc="" value="" no="1"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.predefined.subroutines.1.string.txt" no="3"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
+        <generatedType>copy</generatedType>
+        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
+        <name>factor.predefined.subroutines.1.string.ftl</name>
+        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.predefined.subroutines.1.string.ftl</path>
+        <selected>false</selected>
+        <size>14217</size>
+    </fileTmplts>
+    <fileTmplts>
+        <allFileAttrSelected>true</allFileAttrSelected>
+        <create>true</create>
+        <generatedType>copy</generatedType>
+        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
+        <name>factor-config-example.xml</name>
+        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor-config-example.xml</path>
+        <selected>false</selected>
+        <size>29019</size>
+    </fileTmplts>
+    <fileTmplts>
+        <allFileAttrSelected>true</allFileAttrSelected>
+        <create>true</create>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH||Private System placeholder for create generated relative path" desc="" value="" no="1"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.predefined.subroutines.4.sequences.txt" no="3"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
+        <generatedType>copy</generatedType>
+        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
+        <name>factor.predefined.subroutines.4.sequences.ftl</name>
+        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.predefined.subroutines.4.sequences.ftl</path>
+        <selected>false</selected>
+        <size>8761</size>
+    </fileTmplts>
+    <fileTmplts>
+        <allFileAttrSelected>true</allFileAttrSelected>
+        <create>true</create>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH||Private System placeholder for create generated relative path" desc="" value="" no="1"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.predefined.subroutines.3.loop.hashes.specialVariable.txt" no="3"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
+        <generatedType>copy</generatedType>
+        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
+        <name>factor.predefined.subroutines.3.loop.hashes.specialVariable.sequences.ftl</name>
+        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.predefined.subroutines.3.loop.hashes.specialVariable.sequences.ftl</path>
+        <selected>false</selected>
+        <size>7312</size>
+    </fileTmplts>
+    <fileTmplts>
+        <allFileAttrSelected>true</allFileAttrSelected>
+        <create>true</create>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH||Private System placeholder for create generated relative path" desc="" value="" no="1"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.predefined.subroutines.2.booleans.date.time.numbers.txt" no="3"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
+        <generatedType>copy</generatedType>
+        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
+        <name>factor.predefined.subroutines.2.booleans.date.time.numbers.ftl</name>
+        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.predefined.subroutines.2.booleans.date.time.numbers.ftl</path>
+        <selected>false</selected>
+        <size>10995</size>
+    </fileTmplts>
+    <fileTmplts>
+        <allFileAttrSelected>true</allFileAttrSelected>
+        <create>true</create>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH||Private System placeholder for create generated relative path" desc="" value="" no="1"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.4.function.return.global.txt" no="3"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
+        <generatedType>copy</generatedType>
+        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
+        <name>factor.directives.4.function.return.global.ftl</name>
+        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.4.function.return.global.ftl</path>
+        <selected>false</selected>
+        <size>3189</size>
+    </fileTmplts>
+    <fileTmplts>
+        <allFileAttrSelected>true</allFileAttrSelected>
+        <create>true</create>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH||Private System placeholder for create generated relative path" desc="" value="" no="1"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.1.ftl.outputformat.comment.txt" no="3"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
+        <generatedType>copy</generatedType>
+        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
+        <name>factor.directives.1.ftl.outputformat.comment.ftl</name>
+        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.1.ftl.outputformat.comment.ftl</path>
+        <selected>false</selected>
+        <size>3032</size>
+    </fileTmplts>
+    <fileTmplts>
+        <allFileAttrSelected>true</allFileAttrSelected>
+        <create>true</create>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH||Private System placeholder for create generated relative path" desc="" value="" no="1"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.2.assign.attempt.recover.txt" no="3"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
+        <generatedType>copy</generatedType>
+        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
+        <name>factor.directives.2.assign.attempt.recover.ftl</name>
+        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.2.assign.attempt.recover.ftl</path>
+        <selected>false</selected>
+        <size>2573</size>
+    </fileTmplts>
+    <fileTmplts>
+        <allFileAttrSelected>true</allFileAttrSelected>
+        <create>true</create>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH||Private System placeholder for create generated relative path" desc="" value="" no="1"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.3.compress.escape.flush.txt" no="3"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
+        <generatedType>copy</generatedType>
+        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
+        <name>factor.directives.3.compress.escape.flush.ftl</name>
+        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.3.compress.escape.flush.ftl</path>
+        <selected>false</selected>
+        <size>2373</size>
+    </fileTmplts>
+    <fileTmplts>
+        <allFileAttrSelected>true</allFileAttrSelected>
+        <create>true</create>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH||Private System placeholder for create generated relative path" desc="" value="" no="1"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.5.if.elseif.else.import.include.txt" no="3"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
+        <generatedType>copy</generatedType>
+        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
+        <name>factor.directives.5.if.elseif.else.import.include.ftl</name>
+        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.5.if.elseif.else.import.include.ftl</path>
+        <selected>false</selected>
+        <size>2719</size>
+    </fileTmplts>
+    <fileTmplts>
+        <allFileAttrSelected>true</allFileAttrSelected>
+        <create>true</create>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH||Private System placeholder for create generated relative path" desc="" value="" no="1"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.6.list.else.items.sep.break.txt" no="3"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
+        <generatedType>copy</generatedType>
+        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
+        <name>factor.directives.6.list.else.items.sep.break.ftl</name>
+        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.6.list.else.items.sep.break.ftl</path>
+        <selected>false</selected>
+        <size>3214</size>
+    </fileTmplts>
+    <fileTmplts>
+        <allFileAttrSelected>true</allFileAttrSelected>
+        <create>true</create>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH||Private System placeholder for create generated relative path" desc="" value="" no="1"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.7.local.macro.nested.return.txt" no="3"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
+        <generatedType>copy</generatedType>
+        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
+        <name>factor.directives.7.local.macro.nested.return.ftl</name>
+        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.7.local.macro.nested.return.ftl</path>
+        <selected>false</selected>
+        <size>7252</size>
+    </fileTmplts>
+    <fileTmplts>
+        <allFileAttrSelected>true</allFileAttrSelected>
+        <create>true</create>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH||Private System placeholder for create generated relative path" desc="" value="" no="1"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.8.stop.switch.case.default.break.trim.txt" no="3"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
+        <generatedType>copy</generatedType>
+        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
+        <name>factor.directives.8.stop.switch.case.default.break.trim.ftl</name>
+        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.8.stop.switch.case.default.break.trim.ftl</path>
+        <selected>false</selected>
+        <size>2639</size>
+    </fileTmplts>
+    <fileTmplts>
+        <allFileAttrSelected>true</allFileAttrSelected>
+        <create>true</create>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH||Private System placeholder for create generated relative path" desc="" value="" no="1"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.9.html_escape.setting.txt" no="3"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
+        <generatedType>copy</generatedType>
+        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
+        <name>factor.directives.9.html_escape.setting.ftl</name>
+        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.9.html_escape.setting.ftl</path>
+        <selected>false</selected>
+        <size>3012</size>
+    </fileTmplts>
+    <fileTmplts>
+        <allFileAttrSelected>true</allFileAttrSelected>
+        <create>true</create>
+        <generatedType>copy</generatedType>
+        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
+        <name>lib</name>
+        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/lib</path>
+        <selected>false</selected>
+        <size>128</size>
+    </fileTmplts>
+    <fileTmplts>
+        <allFileAttrSelected>true</allFileAttrSelected>
+        <create>true</create>
+        <generatedType>copy</generatedType>
+        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
+        <name>README.md</name>
+        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/README.md</path>
+        <selected>false</selected>
+        <size>2451</size>
+    </fileTmplts>
+    <fileTmplts>
+        <allFileAttrSelected>true</allFileAttrSelected>
+        <create>true</create>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="src" no="1"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="many" no="2"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAMEX" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="test_rename_file.txt" no="3"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_JAVA_PACKAGE" desc="Private System placeholder for define package name" value="test.id.co.factor.[table].[base].[class].[instance]" no="4"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="5"/>
+        <generatedType>copy</generatedType>
+        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
+        <name>Factor - User Defined Subroutines - Example.ftl</name>
+        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/Factor - User Defined Subroutines - Example.ftl</path>
+        <selected>false</selected>
+        <size>13344</size>
+    </fileTmplts>
+    <fileTmplts>
+        <allFileAttrSelected>true</allFileAttrSelected>
+        <create>true</create>
+        <generatedType>copy</generatedType>
+        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
+        <name>Factor - Predefined Subroutines - Example4.ftl</name>
+        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/Factor - Predefined Subroutines - Example4.ftl</path>
+        <selected>false</selected>
+        <size>32455</size>
+    </fileTmplts>
+    <filePublicAttrs/>
+    <fileDefaultAttrs/>
+    <comment>test comment</comment>
+    <draftTemplate/>
+</ns2:advCrudGenDomain>
