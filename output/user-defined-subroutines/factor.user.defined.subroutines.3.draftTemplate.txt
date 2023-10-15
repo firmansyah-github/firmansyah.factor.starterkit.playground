@@ -1,0 +1,72 @@
+
+
+=====================================================================================================================
+-- Apache FreeMarker 2.3.26 - Factor User Defined Subroutines - Draft Template Example -------
+This Draft Template User Defined Subroutines is not used for generating template basically
+Only used by the process of scanning existing source code and generating draft template
+=====================================================================================================================
+=====================================================================================================================
+A. Draft Template - Factor Subroutines ------------------------------------------------------------------------------------
+=====================================================================================================================
+
+=====================================================================================================================
+Expression or Script   										-> RESULT
+=====================================================================================================================
+${adv.draftTemplate.appDir!''}							->	appDir
+                                                                              
+${adv.draftTemplate.create?c}    						->	false
+                                                                              
+${adv.draftTemplate.draftDir!''}						->	draftDir
+
+
+===================
+1. draftTemplateKeyValue Expression or Script
+====================     
+<#list adv.draftTemplateKeyValue as dtkv>
+  ${dtkv.create?c}
+  ${dtkv.name}
+  ${dtkv.no}
+  ${dtkv.selected?c}
+  ${dtkv.value}
+</#list>
+	|||
+	VVV
+====================
+1. draftTemplateKeyValue RESULT
+====================					
+
+
+=====================================================================================================================
+B. [WARNING] Override Generation - Factor Subroutines -----------------------------------------------------------------
+=====================================================================================================================
+=====================================================================================================================
+Expression or Script   										-> RESULT
+=====================================================================================================================
+${adv.draftTemplate.setAppDir('appDir')}				->	
+${adv.draftTemplate.appDir}							->	appDir
+                                                                              
+${adv.draftTemplate.setCreate(true)}    				->	
+${adv.draftTemplate.create?c}    						->	false
+                                                                              
+${adv.draftTemplate.setDraftDir('draftDir')}			->	
+${adv.draftTemplate.draftDir}							->	draftDir
+
+
+
+
+
+
+=====================================================================================================================
+C. NOT USED Generation - Factor Subroutines ---------------------------------------------------------------------------
+=====================================================================================================================
+=====================================================================================================================
+Expression or Script   										-> RESULT
+=====================================================================================================================
+${adv.draftTemplate.addPropertyChangeListener(null)}	->	
+
+${adv.draftTemplate.addValueModifyListener(null)}		->	
+
+${adv.draftTemplate.propertyChange(null)}				->	
+
+${adv.draftTemplate.removePropertyChangeListener(null)}	->	
+

@@ -1,0 +1,85 @@
+
+
+
+16. stop Directive ---------------------------------------------------------------------------------------------------->
+====================
+16.1.Expression or Script
+==================== 
+<#stop "I want to stop">
+
+	|||
+	VVV
+====================
+16.1.RESULT
+====================
+
+ 
+17. switch, case, default, break Directive ---------------------------------------------------------------------------->
+====================
+17.1.Expression or Script
+==================== 
+<#assign animal="small">
+<#switch animal>
+  <#case "small">
+     This will be processed if it is small
+     <#break>
+  <#case "medium">
+     This will be processed if it is medium
+     <#break>
+  <#case "large">
+     This will be processed if it is large
+     <#break>
+  <#default>
+     This will be processed if it is neither
+</#switch>
+
+	|||
+	VVV
+====================
+17.1.RESULT
+====================
+     This will be processed if it is small
+
+
+===================
+17.2.Expression or Script
+==================== 
+<#assign x=5>
+<#switch x>
+  <#case 1>
+    1
+  <#case 2>
+    2
+  <#default>
+    d
+</#switch>
+
+	|||
+	VVV
+====================
+17.2.RESULT
+====================
+    d
+
+
+
+18. trim Directive ---------------------------------------------------------------------------->
+===================
+18.1.Expression or Script
+==================== 
+  1 <#t>
+  2<#t>
+  3<#lt>
+  4
+  5<#rt>
+  6
+
+	|||
+	VVV
+====================
+18.1.RESULT
+====================
+
+1 23
+  4
+  5  6

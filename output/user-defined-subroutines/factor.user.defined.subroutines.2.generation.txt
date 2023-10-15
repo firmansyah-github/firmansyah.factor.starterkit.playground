@@ -1,0 +1,65 @@
+
+
+=====================================================================================================================
+-- Apache FreeMarker 2.3.26 - Factor User Defined Subroutines - Generation Example -------
+=====================================================================================================================
+=====================================================================================================================
+A. Generation - Factor Subroutines ------------------------------------------------------------------------------------
+=====================================================================================================================
+
+=====================================================================================================================
+Expression or Script   										-> RESULT
+=====================================================================================================================
+${adv.buildDate?datetime}							->	Oct 15, 2023, 8:44:36 PM
+                                                                              
+${adv.comment}    									->	TEST COMMENT ADDITIONAL
+                                                                              
+${adv.generation.create?c}							->	false
+                                                                              
+${adv.generation.outputDir?has_content?c}			->	true
+                                                                              
+${adv.generation.packageName?has_content?c} 		->	true
+                                                                              
+${adv.generation.rootDir}							->	/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output
+                                                                              
+${adv.generation.specifyTemplateDir?c}				->	true
+                                                                              
+${adv.generation.superClassName?has_content?c}		->	true
+                                                                              
+${adv.generation.templateDir}						->	/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example
+
+
+=====================================================================================================================
+B. [WARNING] Override Generation - Factor Subroutines -----------------------------------------------------------------
+=====================================================================================================================
+=====================================================================================================================
+Expression or Script   										-> RESULT
+=====================================================================================================================
+${adv.setBuildDate(.now)}							->	
+${adv.buildDate?datetime}							->	Oct 15, 2023, 8:44:37 PM
+
+${adv.setComment('TEST COMMENT ADDITIONAL')}		->	
+${adv.comment}    									->	TEST COMMENT ADDITIONAL
+
+${adv.generation.setCreate(true)}					->	
+${adv.generation.create?c}							->	false
+
+
+
+
+
+
+=====================================================================================================================
+C. NOT USED Generation - Factor Subroutines ---------------------------------------------------------------------------
+=====================================================================================================================
+=====================================================================================================================
+Expression or Script   										-> RESULT
+=====================================================================================================================
+${adv.generation.addPropertyChangeListener(null)}	->	
+
+${adv.generation.addValueModifyListener(null)}		->	
+
+${adv.generation.propertyChange(null)}				->	
+
+${adv.generation.removePropertyChangeListener(null)}	->	
+

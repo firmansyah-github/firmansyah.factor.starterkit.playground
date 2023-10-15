@@ -1,0 +1,295 @@
+
+14. local Directive --------------------------------------------------------------------------------------------------->
+====================
+14.1.Expression or Script
+==================== 
+<#function sum>
+  <#local num = 0, num2=2>
+  <#return num2>
+</#function>
+${sum()}
+
+	|||
+	VVV
+====================
+14.1.RESULT
+==================== 
+2
+
+
+====================
+14.2.Expression or Script
+==================== 
+<#macro test>
+  <#local num>
+  <p>Copyright (C)Someone. All rights reserved.</p>
+  </#local>
+  ${num}
+</#macro>
+<@test/>
+	|||
+	VVV
+====================
+14.2.RESULT
+==================== 
+    <p>Copyright (C)Someone. All rights reserved.</p>
+
+
+
+
+15. macro, nested, return Directive ----------------------------------------------------------------------------------->
+====================
+15.1.Expression or Script
+==================== 
+<#macro test>
+  Test text
+</#macro>
+<#-- call the macro: -->
+<@test/>
+
+	|||
+	VVV
+====================
+15.1.RESULT
+==================== 
+  Test text
+
+
+====================
+15.2.Expression or Script
+==================== 
+<#macro test foo bar baaz>
+  Test text, and the params: ${foo}, ${bar}, ${baaz}
+</#macro>
+<#-- call the macro: -->
+<@test foo="a" bar="b" baaz=5*5-2/>
+
+	|||
+	VVV
+====================
+15.2.RESULT
+====================
+  Test text, and the params: a, b, 23
+
+
+
+====================
+15.3.Expression or Script
+==================== 
+<#macro test foo bar="Bar" baaz=-1>
+  Test text, and the params: ${foo}, ${bar}, ${baaz}
+</#macro>
+<@test foo="a" bar="b" baaz=5*5-2/>
+<@test foo="a" bar="b"/>
+<@test foo="a" baaz=5*5-2/>
+<@test foo="a"/>
+
+	|||
+	VVV
+====================
+15.3.RESULT
+====================
+  Test text, and the params: a, b, 23
+  Test text, and the params: a, b, -1
+  Test text, and the params: a, Bar, 23
+  Test text, and the params: a, Bar, -1
+
+====================
+15.4.Expression or Script
+==================== 
+<#macro list title items>
+  <p>${title?cap_first}:
+  <ul>
+    <#list items as x>
+      <li>${x?cap_first}
+    </#list>
+  </ul>
+</#macro>
+<@list items=["mouse", "elephant", "python"] title="Animals"/>
+
+	|||
+	VVV
+====================
+15.4.RESULT
+====================
+  <p>Animals:
+  <ul>
+      <li>Mouse
+      <li>Elephant
+      <li>Python
+  </ul>
+
+
+
+
+====================
+15.5.Expression or Script
+==================== 
+<#macro img src extra...>
+  <img src="/myapp${src?ensure_starts_with('/')}"
+    <#list extra as attrName, attrVal>
+      ${attrName}="${attrVal}"
+    </#list>
+  >
+</#macro>
+<@img src="/images/test.png" width=100 height=50 alt="Test"/>
+
+	|||
+	VVV
+====================
+15.5.RESULT
+====================
+  <img src="/myapp/images/test.png"
+      width="100"
+      alt="Test"
+      height="50"
+  >
+
+
+====================
+15.6.Expression or Script
+==================== 
+<#macro m a b ext...>
+  a = ${a}
+  b = ${b}
+  <#if ext?is_sequence>
+    <#list ext as e>
+      ${e?index} = ${e}
+    </#list>
+  <#else>
+    <#list ext as k, v>
+      ${k} = ${v}
+    </#list>
+  </#if>
+</#macro>
+
+<@m 1 2 3 4 5 />
+
+<@m a=1 b=2 c=3 d=4 e=5 data\-foo=6 myns\:bar=7 />
+
+	|||
+	VVV
+====================
+15.6.RESULT
+====================
+
+  a = 1
+  b = 2
+      0 = 3
+      1 = 4
+      2 = 5
+
+  a = 1
+  b = 2
+      data-foo = 6
+      c = 3
+      d = 4
+      e = 5
+      myns:bar = 7
+
+
+====================
+15.7.Expression or Script
+==================== 
+<#macro do_twice>
+  1. <#nested>
+  2. <#nested>
+</#macro>
+<@do_twice>something</@do_twice>
+
+	|||
+	VVV
+====================
+15.7.RESULT
+====================
+  1. something
+  2. something
+
+
+
+====================
+15.8.Expression or Script
+==================== 
+<#macro do_thrice>
+  <#nested 1>
+  <#nested 2>
+  <#nested 3>
+</#macro>
+<@do_thrice ; x>
+  ${x} Anything.
+</@do_thrice>
+
+	|||
+	VVV
+====================
+15.8.RESULT
+====================
+  1 Anything.
+  2 Anything.
+  3 Anything.
+
+
+
+====================
+15.9.Expression or Script
+==================== 
+ <#macro repeat count>
+  <#list 1..count as x>
+    <#nested x, x/2, x==count>
+  </#list>
+</#macro>
+<@repeat count=4 ; c, halfc, last>
+  ${c}. ${halfc}<#if last> Last!</#if>
+</@repeat>
+
+	|||
+	VVV
+====================
+15.9.RESULT
+====================
+  1. 0.5
+  2. 1
+  3. 1.5
+  4. 2 Last!
+
+====================
+15.10.Expression or Script
+==================== 
+ <#macro test>
+  Test text
+  <#return>
+  Will not be printed.
+</#macro>
+<@test/>
+
+	|||
+	VVV
+====================
+15.10.RESULT
+====================
+  Test text
+
+====================
+15.11.Expression or Script
+==================== 
+<#macro heading title level>
+  <p>${title?cap_first}:
+  <p>${level}:  
+</#macro> 
+<@heading "Preface", 1/> is equivalent with 
+<@heading title="Preface" level=1/> or 
+<@heading level=1 title="Preface"/>
+
+	|||
+	VVV
+====================
+15.11.RESULT
+====================
+  <p>Preface:
+  <p>1:  
+ is equivalent with 
+  <p>Preface:
+  <p>1:  
+ or 
+  <p>Preface:
+  <p>1:  

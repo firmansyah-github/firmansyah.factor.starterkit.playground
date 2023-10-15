@@ -1,0 +1,237 @@
+
+=====================================================================================================================
+-- Apache FreeMarker 2.3.26 - Predefined Subroutines - Loop variable Example               --------------------------
+=====================================================================================================================
+
+=====================================================================================================================
+Expression or Script   										-> RESULT
+=====================================================================================================================
+
+===================
+1. counter Expression or Script
+==================== 
+<#list ['a', 'b', 'c'] as i>
+${i?counter}: ${i}
+</#list>
+	|||
+	VVV
+====================
+1. counter RESULT
+====================
+1: a
+2: b
+3: c
+
+
+===================
+2. has_next Expression or Script
+==================== 
+<#list ['a', 'b', 'c'] as i>
+${i?has_next?c} 
+</#list>
+    |||
+	VVV
+====================
+2. has_next RESULT
+====================
+true 
+true 
+false 
+
+===================
+3. index Expression or Script
+==================== 
+<#list ['a', 'b', 'c'] as i>
+${i?index}: ${i}
+</#list>
+    |||
+	VVV
+====================
+3. index RESULT
+====================
+0: a
+1: b
+2: c
+
+
+===================
+4. is_even_item Expression or Script
+==================== 
+<#list ['a', 'b', 'c', 'd'] as i>
+${i?is_even_item?c} 
+</#list>
+    |||
+	VVV
+====================
+4. is_even_item RESULT
+====================
+false 
+true 
+false 
+true 
+
+===================
+5. is_first Expression or Script
+==================== 
+<#list ['a', 'b', 'c'] as i>
+${i?is_first?c} 
+</#list>
+    |||
+	VVV
+====================
+5. is_first RESULT
+====================
+true 
+false 
+false 
+
+===================
+6. is_last Expression or Script
+==================== 
+<#list ['a', 'b', 'c'] as i>$
+{i?is_last?c} 
+</#list>
+    |||
+	VVV
+====================
+6. is_last RESULT
+====================
+false 
+false 
+true 
+
+===================
+7. is_odd_item Expression or Script
+==================== 
+<#list ['a', 'b', 'c', 'd'] as i>
+${i?is_odd_item?c} 
+</#list>
+    |||
+	VVV
+====================
+7. is_odd_item RESULT
+====================
+true 
+false 
+true 
+false 
+
+===================
+8. item_cycle Expression or Script
+==================== 
+<#list ['a', 'b', 'c', 'd', 'e', 'f', 'g'] as i>
+<tr class="${i?item_cycle('row1', 'row2', 'row3')}">${i}</tr><
+/#list>
+    |||
+	VVV
+====================
+8. item_cycle RESULT
+====================
+<tr class="row1">a</tr>
+<tr class="row2">b</tr>
+<tr class="row3">c</tr>
+<tr class="row1">d</tr>
+<tr class="row2">e</tr>
+<tr class="row3">f</tr>
+<tr class="row1">g</tr>
+
+===================
+9. item_parity Expression or Script
+====================     
+<#list ['a', 'b', 'c', 'd'] as i>
+<tr class="${i?item_parity}Row">${i}</tr>
+</#list>
+    |||
+	VVV
+====================
+9. item_parity RESULT
+====================
+<tr class="oddRow">a</tr>
+<tr class="evenRow">b</tr>
+<tr class="oddRow">c</tr>
+<tr class="evenRow">d</tr>
+
+===================
+10. item_parity_cap Expression or Script
+====================     
+<#list ['a', 'b', 'c', 'd'] as i>
+<tr class="row${i?item_parity_cap}">${i}</tr>
+</#list>
+    |||
+	VVV
+====================
+10. item_parity_cap RESULT
+====================
+<tr class="rowOdd">a</tr>
+<tr class="rowEven">b</tr>
+<tr class="rowOdd">c</tr>
+<tr class="rowEven">d</tr>
+
+=====================================================================================================================
+-- Apache FreeMarker 2.3.26 - Predefined Subroutines - Hashes/Type independent/Seldom used and Expert Example -------
+=====================================================================================================================
+===================
+1. keys Expression or Script
+==================== 
+<#assign myHash = { "name": "mouse", "price": 50 }>
+<#list myHash?keys as k>
+  ${k}
+</#list>
+    |||
+	VVV
+====================
+1. keys RESULT
+====================
+  name
+  price
+
+===================
+2. values Expression or Script
+====================
+<#assign myHash = { "name": "mouse", "price": 50 }>
+<#list myHash?values as v>
+  ${v}
+</#list>
+    |||
+	VVV
+====================
+2. values RESULT
+==================== 
+  mouse
+  50
+
+
+===================
+3. switch Expression or Script
+====================
+<#list ['r', 'w', 'x', 's'] as flag>
+  ${flag?switch('r', 'readable', 'w' 'writable', 'x', 'executable', 'unknown flag: ' + flag)}
+</#list>
+    |||
+	VVV
+====================
+3. switch RESULT
+==================== 
+  readable
+  writable
+  executable
+  unknown flag: s
+
+${"1+2"?eval} 												-> 3
+
+${""?has_content?c} 										-> false
+
+<#assign x=["a", "b", "c"]> 								-> 
+<#assign templateSource = r"<#list x as y>${y}</#list>"> 	-> <#assign inlineTemplate = templateSource?interpret> 		-> 
+<@inlineTemplate /> 										-> abc
+
+
+=====================================================================================================================
+-- Apache FreeMarker 2.3.26 - Predefined Subroutines - Special Variable Reference Example -------
+=====================================================================================================================
+
+<#ftl output_format="HTML" auto_esc=false>
+
+Today is ${.now?date} 		-> Today is Oct 15, 2023
+"Page generated: ${.now}" 	-> "Page generated: Oct 15, 2023, 8:44:37 PM"
+

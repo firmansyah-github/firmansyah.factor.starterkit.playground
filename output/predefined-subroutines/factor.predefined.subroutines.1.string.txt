@@ -1,0 +1,208 @@
+
+=====================================================================================================================
+-- Apache FreeMarker 2.3.26 - Predefined Subroutines - String Example -----------------------------------------------
+=====================================================================================================================
+
+=====================================================================================================================
+Expression or Script   										-> RESULT
+=====================================================================================================================
+${true?c} 								-> true 
+${true?string("yes","no")} 			-> yes
+${'example'?cap_first} 				-> Example
+${"example  example"?capitalize} 		-> Example  Example
+${"example\nexample"?chop_linebreak} 	-> example
+example
+${"piceous"?contains("ice")}?c 		-> true
+
+${"Oct 25, 1995"?date} 				-> Oct 25, 1995
+${"3:05:30 PM"?time} 					-> 3:05:30 PM
+${"Oct 25, 1995, 03:05:00 PM"?datetime("MMM d, y, h:mm:ss a")} -> Oct 25, 1995, 3:05:00 PM
+
+-- Changing the setting value changes the expected format: --
+==============================================================
+${"1995-10-25T15:05"?datetime} 		-> 1995-10-25T15:05:00+07:00
+
+-- Parsing XML Schema xs:date, xs:time and xs:dateTime values: --
+==============================================================
+${"1995-10-25"?date.xs} 				-> Oct 25, 1995
+${"15:05:30"?time.xs} 					-> 3:05:30 PM
+${"1995-10-25T15:05:00"?datetime.xs} 	-> 1995-10-25T15:05:00+07:00
+
+-- Parsing ISO 8601 (both extended and basic formats): 	--
+==============================================================
+${"1995-10-25T15:05"?datetime.iso} 	-> 1995-10-25T15:05:00+07:00
+${"19951025T1505"?datetime.iso} 		-> 1995-10-25T15:05:00+07:00
+
+-- Parsing with SimpleDateFormat patterns: --
+==============================================================
+${"10/25/1995"?date("MM/dd/yyyy")} 	-> Oct 25, 1995
+${"15:05:30"?time("HH:mm:ss")} 		-> 3:05:30 PM
+${"1995-10-25 03:05 PM"?datetime("yyyy-MM-dd hh:mm a")} -> 1995-10-25T15:05:00+07:00
+
+${"ahead"?ends_with("head")} 			-> true
+
+${"foo"?ensure_ends_with("/")} 		-> foo/
+${"foo/"?ensure_ends_with("/")} 		-> foo/ 
+
+${"foo"?ensure_starts_with("/")} 		-> /foo
+${"/foo"?ensure_starts_with("/")} 		-> /foo
+
+${"abc://"?ensure_starts_with("[a-zA-Z]+://", "http://")} -> abc://
+${"abc://"?ensure_starts_with("[a-zA-Z]+://", "http://","r")} -> abc://
+${"abc://"?ensure_starts_with("[a-zA-Z]+://", "http://","i")} -> http://abc://
+
+${"abcabc"?index_of("bc")} 				-> 	 1 
+${"The 'foo' bean."?j_string}              ->   The 'foo' bean.                       
+${ "Big Joe's \"right hand\""?js_string}   ->   Big Joe\'s \"right hand\"  
+${ "Big Joe's \"right hand\""?json_string} ->   Big Joe's \"right hand\"
+
+${"abcdefgh"?keep_after("de")} 				-> fgh
+${"foo : bar"?keep_after(r"\s*:\s*", "r")} 	-> bar
+${"foo.bar.txt"?keep_after_last(".")} 			-> txt
+${"abcdef"?keep_before("de")} 					-> abc
+${"foo : bar"?keep_before(r"\s*:\s*", "r")} 	-> foo
+${"foo.bar.txt"?keep_after_last(".")} 			-> txt
+
+${"abcabc"?last_index_of("ab")} 	-> 3
+${"abcabc"?last_index_of("ab", 2)} -> 0
+
+[${""?left_pad(5)}]  ->               [     ]           
+[${"a"?left_pad(5)}]  ->              [    a]          
+[${"ab"?left_pad(5)}]  ->             [   ab]         
+[${"abc"?left_pad(5)}]  ->            [  abc]        
+[${"abcd"?left_pad(5)}]  ->           [ abcd]       
+[${"abcde"?left_pad(5)}]  ->          [abcde]      
+[${"abcdef"?left_pad(5)}]  ->         [abcdef]     
+[${"abcdefg"?left_pad(5)}]  ->        [abcdefg]    
+[${"abcdefgh"?left_pad(5)}]  ->       [abcdefgh] 
+${"abcdefgh"?left_pad(5)} -> abcdefgh
+
+[${""?left_pad(5, "-")}]  ->          [-----]      
+[${"a"?left_pad(5, "-")}]  ->         [----a]     
+[${"ab"?left_pad(5, "-")}]  ->        [---ab]    
+[${"abc"?left_pad(5, "-")}]  ->       [--abc]   
+[${"abcd"?left_pad(5, "-")}]  ->      [-abcd]  
+[${"abcde"?left_pad(5, "-")}]  ->     [abcde]
+${"abcde"?left_pad(5, "-")} -> abcde
+
+[${""?left_pad(8, ".oO")}]  ->        [.oO.oO.o]    
+[${"a"?left_pad(8, ".oO")}]  ->       [.oO.oO.a]   
+[${"ab"?left_pad(8, ".oO")}]  ->      [.oO.oOab]  
+[${"abc"?left_pad(8, ".oO")}]  ->     [.oO.oabc] 
+[${"abcd"?left_pad(8, ".oO")}]  ->    [.oO.abcd]
+${"abcd"?left_pad(8, ".oO")} -> .oO.abcd
+
+${"example"?length} 				->  7
+${"GrEeN MoUsE"?lower_case} 		->  green mouse
+
+--Boolean--
+==============================================================
+${"fooo"?matches("fo*")?c} -> true
+${"fooo bar"?matches("fo*")?c} -> false
+
+--Sequence--
+-- This built-in determines if the string exactly matches the pattern. Also, it returns the list of matching sub-strings. --
+============================================================================================================================
+${"foo bar fyo"?matches("f.?o")?c} 			-> false
+<#assign mt = "foo bar fyo"?matches("f.?o")> 	-> 
+<#list mt as m>
+- ${m} -> foo
+- ${m} -> fyo
+
+--regular expression contains groups (parentheses)--
+--1. Entire input match --
+==============================================================
+${"John Doe"?matches(r"(\w+) (\w+)")?c} 			-> true
+<#assign res = "John Doe"?matches(r"(\w+) (\w+)")> -> 
+First name: ${res?groups[1]} 						-> John
+Second name: ${res?groups[2]} 						-> Doe
+
+--2. Subtring matches  --
+==============================================================
+${"aa/rx; ab/r;"?matches("(.+?)/*(.+?);")?c} 		-> true
+<#assign res = "aa/rx; ab/r;"?matches("(.+?)/*(.+?);")>
+<#list res as m> 
+  ${m} -> John Doe
+  ${m?groups[1]} -> John
+  ${m?groups[2]} -> Doe
+<
+
+${"1.23E6"?number} 	-> 1,230,000
+${"1.5e-8"?number} 	-> 0
+${"NaN"?number} 		-> NaN
+${"INF"?number} 		-> ∞
+${"-INF"?number} 		-> -∞
+${"Infinity"?number} 	-> ∞
+${"-Infinity"?number} 	-> -∞
+
+${"this is a car acarus"?replace("car", "bulldozer")} 	-> this is a bulldozer abulldozerus
+${"foo"?replace("","|")} 								-> |f|o|o|
+${"foo : bar"?replace(r"\s*:\s*", "x","r")} 			-> fooxbar
+
+[${""?right_pad(5)}]  ->               [     ]           
+[${"a"?right_pad(5)}]  ->              [a    ]          
+[${"ab"?right_pad(5)}]  ->             [ab   ]         
+[${"abc"?right_pad(5)}]  ->            [abc  ]        
+[${"abcd"?right_pad(5)}]  ->           [abcd ]       
+[${"abcde"?right_pad(5)}]  ->          [abcde]      
+[${"abcdef"?right_pad(5)}]  ->         [abcdef]     
+[${"abcdefg"?right_pad(5)}]  ->        [abcdefg]    
+[${"abcdefgh"?right_pad(5)}]  ->       [abcdefgh]   
+            
+[${""?right_pad(8, ".oO")}]  ->        [.oO.oO.o]    
+[${"a"?right_pad(8, ".oO")}]  ->       [aoO.oO.o]   
+[${"ab"?right_pad(8, ".oO")}]  ->      [abO.oO.o]  
+[${"abc"?right_pad(8, ".oO")}]  ->     [abc.oO.o] 
+[${"abcd"?right_pad(8, ".oO")}]  ->    [abcdoO.o]
+
+${"abcdef"?remove_beginning("abc")} -> def
+${"foobar"?remove_beginning("abc")} -> foobar
+
+${"abcdef"?remove_ending("def")} -> abc
+${"foobar"?remove_ending("def")} -> foobar
+
+<#list "someMOOtestMOOtext"?split("MOO") as x>
+- ${x} -> some
+- ${x} -> test
+- ${x} -> text
+
+<#list "some,,test,text,"?split(",") as x> 
+- ${x} -> some
+- ${x} -> 
+- ${x} -> test
+- ${x} -> text
+- ${x} -> 
+
+${"redirect"?starts_with("red")?c} 	-> true 
+${"red"?starts_with("red")?c} 			-> true
+
+${"example"?string}   					->  example
+${1234455?string} 						->  1,234,455
+${"1234455"?string}   					->  1234455
+${true?string}    						->  true
+${false?string}}  						->  false}
+
+(${"  green mouse  "?trim}) 			->  (green mouse)
+
+(${"  green mouse"?uncap_first})    	->  (  green mouse)
+(${"GreEN mouse"?uncap_first})  		->  (greEN mouse)
+(${"- green mouse"?uncap_first})    	->  (- green mouse)
+
+${"GrEeN MoUsE"?upper_case}    		-> GREEN MOUSE
+
+${"a/b c"?url("utf-8")}   				-> a%2Fb%20c
+${"a/b c"?url_path("utf-8")}   		-> a/b%20c
+
+
+<#setting url_escaping_charset="UTF-8">  	-> 
+${"a/b c"?url}   							-> a%2Fb%20c
+${"a/b c"?url_path}   						-> a/b%20c
+
+
+<#assign words = " a bcd, . 1-2-3"?word_list>  -> 
+<#list words as word>   
+[${word}]   ->[a]
+[${word}]   ->[bcd,]
+[${word}]   ->[.]
+[${word}]   ->[1-2-3]
+

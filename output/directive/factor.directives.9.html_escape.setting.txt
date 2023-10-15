@@ -1,0 +1,50 @@
+
+19. html_escape Directive -------------------------------------------------------------------------------------------->
+===================
+19.1.Expression or Script
+==================== 
+<@html_escape>
+  a < b
+  Romeo & Juliet
+</@html_escape>
+
+	|||
+	VVV
+====================
+19.1.RESULT
+====================
+  a &lt; b
+  Romeo &amp; Juliet
+
+
+20. setting Directive ------------------------------------------------------------------------------------------------->
+===================
+20.1.Expression or Script   									-> RESULT
+==================== 
+<#setting datetime_format="iso"> 			-> 
+${"1995-10-25T15:05"?datetime} 			-> 1995-10-25T15:05:00+07:00>
+
+<#setting url_escaping_charset="UTF-8">    -> 
+${"a/b c"?url}   							-> a%2Fb%20c
+${"a/b c"?url_path}   						-> a/b%20c
+
+<#setting datetime_format="MMM dd, yyyy"> 	-> 
+${'Oct 25, 1995'?date?date_if_unknown} 	-> Oct 25, 1995
+${'3:05:30 PM'?time?time_if_unknown} 		-> 3:05:30 PM
+
+<#setting number_format="currency"> 		-> 
+<#assign x=42> 							-> 
+${x} 										-> IDR42.00
+
+<#setting number_format="0.##"> 			-> 
+${1.234} 									-> 1.23
+
+<#setting number_format=",##0.00"> 		-> 
+<#setting locale="en_US"> 					-> 
+US people write:${12345678} 				-> US people write:12,345,678.00
+<#setting locale="hu"> 					-> 
+German people write:${12345678} 			-> German people write:12 345 678,00
+
+<#setting locale="en_US"> 					-> 
+${10002.5?string[",000"]} 					-> 10,002
+${10002.5?string[",000;; roundingMode=halfUp groupingSeparator=_"]} -> 10_003

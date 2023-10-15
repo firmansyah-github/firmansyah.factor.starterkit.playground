@@ -1,0 +1,149 @@
+
+=====================================================================================================================
+-- Apache FreeMarker 2.3.26 - Predefined Subroutines - Booleans/Date/Time/Numbers Example ---------------------------
+=====================================================================================================================
+
+=====================================================================================================================
+Expression or Script   										-> RESULT
+=====================================================================================================================
+
+${true?c} 								-> true
+${true?string("yes","no")} 			-> yes
+
+<#assign foo=true> 					-> 
+${foo?then('Y','N')} 					-> Y
+
+<#assign foo=false> 					-> 
+${foo?then('Y','N')} 					-> N
+
+<#assign x=10> 						-> 
+<#assign y=20> 						-> ${100+(x>y)?then(x,y)} 				-> 120
+
+<#setting datetime_format="MMM dd, yyyy"> 	-> 
+${'Oct 25, 1995'?date?date_if_unknown} 	-> Oct 25, 1995
+${'3:05:30 PM'?time?time_if_unknown} 		-> 3:05:30 PM
+<#setting datetime_format="MMM dd,yyyy hh:mm:ss a"> 		-> 
+${'Oct 25, 1995 03:05:00 PM'?datetime?datetime_if_unknown} -> Oct 25,1995 03:05:00 PM
+
+ 
+--Predefined format names: --
+===================================================================
+<#setting datetime_format="MMM dd,yyyy hh:mm:ss a"> 	-> 
+${"Oct 25,1995 03:05:00 PM"?datetime?string.short} 	-> 10/25/95, 3:05 PM
+${"Oct 25,1995 03:05:00 PM"?datetime?string.medium} 	-> Oct 25, 1995, 3:05:00 PM
+${"Oct 25,1995 03:05:00 PM"?datetime?string.long} 		-> October 25, 1995 at 3:05:00 PM WIB
+${"Oct 25,1995 03:05:00 PM"?datetime?string.full} 		-> Wednesday, October 25, 1995 at 3:05:00 PM Western Indonesia Time
+${"Oct 25,1995 03:05:00 PM"?datetime?string.xs} 		->  1995-10-25T15:05:00+07:00 
+${"Oct 25,1995 03:05:00 PM"?datetime?string.iso} 		->  1995-10-25T15:05:00+07:00 
+
+${"Oct 25,1995 03:05:00 PM"?datetime?string.short} 	-> 10/25/95, 3:05 PM
+${"Oct 25,1995 03:05:00 PM"?datetime?string.medium} 	-> Oct 25, 1995, 3:05:00 PM
+${"Oct 25,1995 03:05:00 PM"?datetime?string.long} 		-> October 25, 1995 at 3:05:00 PM WIB
+${"Oct 25,1995 03:05:00 PM"?datetime?string.full} 		-> Wednesday, October 25, 1995 at 3:05:00 PM Western Indonesia Time
+${"Oct 25,1995 03:05:00 PM"?datetime?string.xs} 		->  1995-10-25T15:05:00+07:00 
+${"Oct 25,1995 03:05:00 PM"?datetime?string.iso} 		->  1995-10-25T15:05:00+07:00 
+
+${"Oct 25,1995 03:05:00 PM"?datetime?string.short} 	-> 10/25/95, 3:05 PM
+${"Oct 25,1995 03:05:00 PM"?datetime?string.medium} 	-> Oct 25, 1995, 3:05:00 PM
+${"Oct 25,1995 03:05:00 PM"?datetime?string.long} 		-> October 25, 1995 at 3:05:00 PM WIB
+${"Oct 25,1995 03:05:00 PM"?datetime?string.full} 		-> Wednesday, October 25, 1995 at 3:05:00 PM Western Indonesia Time
+${"Oct 25,1995 03:05:00 PM"?datetime?string.medium_short} ->  Oct 25, 1995, 3:05 PM 
+${"Oct 25,1995 03:05:00 PM"?datetime?string.xs} 		->  1995-10-25T15:05:00+07:00 
+${"Oct 25,1995 03:05:00 PM"?datetime?string.iso} 		->  1995-10-25T15:05:00+07:00 
+
+--Advanced ISO 8601 and XSD formatting: --
+===================================================================
+${"Oct 25,1995 03:05:00 PM"?datetime?string.iso_m_u}   -> 1995-10-25T08:05Z
+${"Oct 25,1995 03:05:00 PM"?datetime?string.xs_ms_nz}  -> 1995-10-25T15:05:00.000
+
+--Simple Date Format patterns: -- 
+===================================================================
+${"Oct 25,1995 03:05:00 PM"?datetime?string["dd.MM.yyyy,HH:mm"]} 					-> 25.10.1995,15:05
+${"Oct 25,1995 03:05:00 PM"?datetime?string["EEEE,MMMMdd,yyyy,hh:mma'('zzz')'"]} 	-> Wednesday,October25,1995,03:05PM(WIB)
+${"Oct 25,1995 03:05:00 PM"?datetime?string["EEE,MMMd,''yy"]} 						-> Wed,Oct25,'95
+${"Oct 25,1995 03:05:00 PM"?datetime?string.yyyy} -->   --> 1995 
+
+${-5?abs} 										-> -5
+
+${300000000?c} 								-> 300000000
+
+${10000000000000000000000000000?is_infinite?c} -> false
+
+${10000000000000000000000000000?is_nan?c} 		-> false
+
+<#list 1..30 as n>${n?lower_abc} </#list> 		-> a b c d e f g h i j k l m n o p q r s t u v w x y z aa ab ac ad 
+
+
+<#assign testlist=[0, 1, -1, 0.5, 1.5, -0.5,-1.5, 0.25, -0.25, 1.75, -1.75]>  -->  
+<#list testlist as result>${result}?floor=${result?floor}?ceiling=${result?ceiling}?round=${result?round}</#list> --> 
+0?floor=0?ceiling=0?round=0
+1?floor=1?ceiling=1?round=1
+-1?floor=-1?ceiling=-1?round=-1
+0.5?floor=0?ceiling=1?round=1
+1.5?floor=1?ceiling=2?round=2
+-0.5?floor=-1?ceiling=0?round=0
+-1.5?floor=-2?ceiling=-1?round=-1
+0.25?floor=0?ceiling=1?round=0
+-0.25?floor=-1?ceiling=0?round=0
+1.75?floor=1?ceiling=2?round=2
+-1.75?floor=-2?ceiling=-1?round=-2
+
+<#assign x=42> 			-> 
+${x} 						-> 42
+${x?string} 				->  42 --> 
+${x?string.number} 		-> 42
+${x?string.currency} 		-> IDR42.00
+${x?string.percent} 		-> 4,200%
+${x?string.computer} 		-> 42
+
+<#setting number_format="currency"> 	-> 
+<#assign x=42> 						-> 
+${x} 									-> IDR42.00
+${x?string} 							->  IDR42.00 --> 
+${x?string.number} 					-> 42
+${x?string.currency} 					-> IDR42.00
+${x?string.percent} 					-> 4,200%
+
+
+<#assign x=1.234>						-> 
+${x?string["0"]} 						-> 1
+${x?string["0.#"]} 					-> 1.2
+${x?string["0.##"]} 					-> 1.23
+${x?string["0.###"]} 					-> 1.234
+${x?string["0.####"]} 					-> 1.234
+
+${1?string["000.00"]} 					-> 001.00
+${12.1?string["000.00"]} 				-> 012.10
+${123.456?string["000.00"]} 			-> 123.46
+
+${1.2?string["0"]} 					-> 1
+${1.8?string["0"]} 					-> 2
+${1.5?string["0"]} 					-> <--1.5, rounded towards even neighbor
+${2.5?string["0"]} 					-> <--2.5,rounded towards even neighbor
+
+${12345?string["0.##E0"]} 				-> 1.23E4
+
+${12345?string("0.#")} 				-> 12345
+${12345?string["0.#"]} 				-> 12345
+
+<#setting number_format="0.##"> 		-> 
+${1.234} 								-> 1.23
+
+
+<#setting number_format=",##0.00"> 	-> 
+<#setting locale="en_US"> 				-> 
+US people write:${12345678} 			-> US people write:12,345,678.00
+<#setting locale="hu"> 				-> 
+German people write:${12345678} 		-> German people write:12 345 678,00
+
+ --> 
+${10002.5?string[",000"]} 				-> 10,002
+${10002.5?string[",000;; roundingMode=halfUp groupingSeparator=_"]} --> 10_003
+
+<#list 1..30 as n>${n?upper_abc} </#list> 	-> A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD 
+
+${1305575275540?number_to_datetime} 		-> May 17,2011 02:47:55 AM
+${1305575275540?number_to_date} 			-> May 17, 2011
+${1305575275540?number_to_time} 			-> 2:47:55 AM
+
+

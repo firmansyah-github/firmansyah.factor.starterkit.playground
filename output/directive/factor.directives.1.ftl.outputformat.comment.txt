@@ -1,0 +1,93 @@
+1. outputformat Directive------------------------------------------------------------------------------------------------->
+====================
+1.1.Expression or Script
+==================== 
+<#ftl output_format="HTML" auto_esc=false>
+XML escaping: ${"&{}"}
+
+<#outputformat "RTF">
+  RTF escaping: ${"&{}"}
+</#outputformat>
+
+<#outputformat "plainText">
+  No escsaping: ${"&{}"}
+</#outputformat>
+
+XML escsaping: ${"&{}"}
+
+	|||
+	VVV
+====================
+1.1.RESULT
+====================
+XML escaping: &{}
+
+  RTF escaping: &{}
+
+  No escsaping: &{}
+
+XML escsaping: &{}
+
+
+====================
+1.2.Expression or Script            -> RESULT
+==================== 
+${"R&D"} 		-> R&D
+${"R&D"?esc} 	-> R&amp;D
+
+====================
+1.3.Expression or Script
+==================== 
+<#autoesc>
+  ${"&"}
+  ...
+  ${"&"}
+</#autoesc>
+
+	|||
+	VVV
+====================
+1.3.RESULT
+====================
+  &amp;
+  ...
+  &amp;
+
+
+====================
+1.4.Expression or Script						-> Result
+==================== 
+${"<b>Test</b>"} 			-> <b>Test</b>
+${"<b>Test</b>"?no_esc} 	-> <b>Test</b>
+
+2. comment Directive--------------------------------------------------------------------------------------------->
+====================
+2.1.Expression or Script
+==================== 
+<#-- 
+<#ftl output_format="XML">
+${"'{}"}
+<#outputformat "HTML">
+  ${"'{}"}
+  <#outputformat "RTF">
+    ${"'{}"}
+  </#outputformat>
+</#outputformat>
+
+
+<#ftl outputFormat="XML">
+${"'{}"}
+<#outputFormat "{HTML}"><#-- Same as "XML{HTML}" --
+  ${"'{}"}
+  <#outputFormat '{RTF}'><#-- Same as "XML{HTML{RTF}}" --
+    ${"'{}"}
+  </#outputFormat>
+</#outputFormat>
+
+ -->
+
+	|||
+	VVV
+====================
+1.3.RESULT
+====================

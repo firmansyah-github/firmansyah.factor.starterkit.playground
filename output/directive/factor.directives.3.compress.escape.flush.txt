@@ -1,0 +1,76 @@
+
+5. compress Directive ------------------------------------------------------------------------------------------------->
+====================
+5.1.Expression or Script
+==================== 
+<#assign moo = "    moo  \n\n   ">
+(<#compress>
+  1 2  3   4    5
+  ${moo}
+  test only
+
+  I said, test only
+
+</#compress>)
+	|||
+	VVV
+====================
+5.1.RESULT
+==================== 
+(1 2 3 4 5
+moo
+test only
+I said, test only)
+
+6. escape Directive --------------------------------------------------------------------------------------------------->
+====================
+6.1.Expression or Script
+==================== 
+<#assign x = "<test>">
+<#macro m1>
+  m1: ${x}
+</#macro>
+
+<#escape x as x?html>
+  <#macro m2>m2: ${x}</#macro>
+  ${x}
+  <@m1/>
+</#escape>
+${x}
+<@m2/>
+
+<#escape x as x?html>
+  From: ${x}
+  Subject: This is Subject
+  <#noescape>Message: <b> This is Message </b> of ${x}</#noescape>
+  ...
+</#escape>
+
+<#escape x as x?html>
+  Customer Name: ${x}
+  Items to ship:
+  <#escape x as x>
+    ${x}
+  </#escape>
+</#escape>
+
+	|||
+	VVV
+====================
+6.1.RESULT
+==================== 
+
+  &lt;test&gt;
+  m1: <test>
+<test>
+m2: &lt;test&gt;
+  From: &lt;test&gt;
+  Subject: This is Subject
+  Message: <b> This is Message </b> of <test>
+  ...
+
+  Customer Name: &lt;test&gt;
+  Items to ship:
+    &lt;test&gt;
+
+7. flush Directive ---------------------------------------------------------------------------------------------------->

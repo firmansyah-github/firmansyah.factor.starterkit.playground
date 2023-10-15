@@ -1,0 +1,280 @@
+
+
+=====================================================================================================================
+-- Apache FreeMarker 2.3.26 - Predefined Subroutines - Sequences Example -------
+=====================================================================================================================
+
+===================
+1. chunk Expression or Script
+==================== 
+<#assign seq = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']>
+
+<#list seq?chunk(4) as row>
+  <#list row as cell>${cell} </#list>
+</#list>
+
+<#list seq?chunk(4, '-') as row>
+  <#list row as cell>${cell} </#list>
+</#list>
+
+	|||
+	VVV
+====================
+1. chunk RESULT
+====================
+
+  a b c d 
+  e f g h 
+  i j 
+
+  a b c d 
+  e f g h 
+  i j - - 
+
+
+
+===================
+2. first Expression or Script
+==================== 
+<#assign ls = ["whale", "Barbara", "zeppelin", "aardvark", "beetroot"]?sort?reverse?first>
+${ls}
+
+	|||
+	VVV
+====================
+2. first RESULT
+====================
+zeppelin
+
+===================
+3. join Expression or Script
+==================== 
+<#assign colors = ["red", "green", "blue"]>
+${colors?join(", ")}
+${colors?join(", ", "-")}
+${[]?join(", ", "-")}
+
+${colors?join(", ", "-", ".")}
+${[]?join(", ", "-", ".")}
+
+	|||
+	VVV
+====================
+3. join RESULT
+====================
+red, green, blue
+red, green, blue
+-
+
+red, green, blue.
+-
+
+
+===================
+4. last Expression or Script
+==================== 
+<#assign ls = ["whale", "Barbara", "zeppelin", "aardvark", "beetroot"]?sort?reverse?last>
+${ls}
+
+	|||
+	VVV
+====================
+4. last RESULT
+====================
+aardvark
+
+
+===================
+5. reverse Expression or Script
+==================== 
+<#assign ls = ["whale", "Barbara", "zeppelin", "aardvark", "beetroot"]?sort?reverse>
+<#list ls as i>${i} </#list>
+
+	|||
+	VVV
+====================
+5. reverse RESULT
+====================
+zeppelin whale beetroot Barbara aardvark 
+
+
+===================
+6. seq_contains Expression or Script
+==================== 
+<#assign x = ["red", 16, "blue", "cyan"]>
+"blue": ${x?seq_contains("blue")?string("yes", "no")}
+"yellow": ${x?seq_contains("yellow")?string("yes", "no")}
+16: ${x?seq_contains(16)?string("yes", "no")}
+"16": ${x?seq_contains("16")?string("yes", "no")}
+
+	|||
+	VVV
+====================
+6. seq_contains RESULT
+====================
+"blue": yes
+"yellow": no
+16: yes
+"16": no
+
+
+===================
+7. seq_index_of Expression or Script
+==================== 
+<#assign colors = ["red", "green", "blue"]>
+${colors?seq_index_of("blue")}
+${colors?seq_index_of("red")}
+${colors?seq_index_of("purple")}
+
+	|||
+	VVV
+====================
+7. seq_index_of RESULT
+====================
+2
+0
+-1
+
+===================
+8. seq_index_of Expression or Script
+==================== 
+<#assign names = ["Joe", "Fred", "Joe", "Susan"]>
+No 2nd param: ${names?seq_index_of("Joe")}
+-2: ${names?seq_index_of("Joe", -2)}
+-1: ${names?seq_index_of("Joe", -1)}
+ 0: ${names?seq_index_of("Joe", 0)}
+ 1: ${names?seq_index_of("Joe", 1)}
+ 2: ${names?seq_index_of("Joe", 2)}
+ 3: ${names?seq_index_of("Joe", 3)}
+ 4: ${names?seq_index_of("Joe", 4)}
+
+	|||
+	VVV
+====================
+8. seq_index_of RESULT
+====================
+No 2nd param: 0
+-2: 0
+-1: 0
+ 0: 0
+ 1: 2
+ 2: 2
+ 3: -1
+ 4: -1
+
+ 
+===================
+9. seq_last_index_of Expression or Script
+==================== 
+<#assign names = ["Joe", "Fred", "Joe", "Susan"]>
+No 2nd param: ${names?seq_last_index_of("Joe")}
+-2: ${names?seq_last_index_of("Joe", -2)}
+-1: ${names?seq_last_index_of("Joe", -1)}
+ 0: ${names?seq_last_index_of("Joe", 0)}
+ 1: ${names?seq_last_index_of("Joe", 1)}
+ 2: ${names?seq_last_index_of("Joe", 2)}
+ 3: ${names?seq_last_index_of("Joe", 3)}
+ 4: ${names?seq_last_index_of("Joe", 4)}
+
+	|||
+	VVV
+====================
+9. seq_last_index_of RESULT
+====================
+No 2nd param: 2
+-2: -1
+-1: -1
+ 0: 0
+ 1: 0
+ 2: 2
+ 3: 2
+ 4: 2
+
+ 
+===================
+10. sort Expression or Script
+==================== 
+<#assign ls = ["whale", "Barbara", "zeppelin", "aardvark", "beetroot"]?sort>
+ <#list ls as i>${i} </#list>
+${ls?size}
+
+
+<#assign ls = ["whale", "Barbara", "zeppelin", "aardvark", "beetroot"]?sort>
+<#list ls as i>${i} </#list>
+
+	|||
+	VVV
+====================
+10. sort RESULT
+====================
+ aardvark Barbara beetroot whale zeppelin 
+5
+
+
+aardvark Barbara beetroot whale zeppelin 
+
+===================
+11. sort_by Expression or Script
+==================== 
+<#assign ls = [
+  {"name":"whale", "weight":2000},
+  {"name":"Barbara", "weight":53},
+  {"name":"zeppelin", "weight":-200},
+  {"name":"aardvark", "weight":30},
+  {"name":"beetroot", "weight":0.3}
+]>
+Order by name:
+<#list ls?sort_by("name") as i>
+- ${i.name}: ${i.weight}
+</#list>
+
+Order by weight:
+<#list ls?sort_by("weight") as i>
+- ${i.name}: ${i.weight}
+</#list>
+
+	|||
+	VVV
+====================
+11. sort_by RESULT
+====================
+Order by name:
+- aardvark: 30
+- Barbara: 53
+- beetroot: 0.3
+- whale: 2,000
+- zeppelin: -200
+
+Order by weight:
+- zeppelin: -200
+- beetroot: 0.3
+- aardvark: 30
+- Barbara: 53
+- whale: 2,000
+
+
+
+
+
+===================
+12. sort_by Expression or Script
+==================== 
+<#assign members = [
+    {"name": {"first": "Joe", "last": "Smith"}, "age": 40},
+    {"name": {"first": "Fred", "last": "Crooger"}, "age": 35},
+    {"name": {"first": "Amanda", "last": "Fox"}, "age": 25}]>
+Sorted by name.last:
+<#list members?sort_by(['name', 'last']) as m>
+- ${m.name.last}, ${m.name.first}: ${m.age} years old
+</#list>
+
+	|||
+	VVV
+====================
+12. sort_by RESULT
+====================
+Sorted by name.last:
+- Crooger, Fred: 35 years old
+- Fox, Amanda: 25 years old
+- Smith, Joe: 40 years old
+

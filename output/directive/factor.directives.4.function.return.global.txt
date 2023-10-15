@@ -1,0 +1,112 @@
+
+8. function, return Directive ----------------------------------------------------------------------------------------->
+====================
+8.1.Expression or Script
+==================== 
+<#function avg x y>
+  <#return (x + y) / 2>
+</#function>
+${avg(10, 20)}
+
+	|||
+	VVV
+====================
+8.1.RESULT
+==================== 
+15
+
+====================
+8.2.Expression or Script
+==================== 
+<#function avg nums...>
+  <#local sum = 0>
+  <#list nums as num>
+    <#local sum += num>
+  </#list>
+  <#if nums?size != 0>
+    <#return sum / nums?size>
+  </#if>
+</#function>
+${avg(10, 20)}
+${avg(10, 20, 30, 40)}
+${avg()!"N/A"}
+
+	|||
+	VVV
+====================
+8.2.RESULT
+==================== 
+15
+25
+N/A
+ 
+  
+   
+====================
+8.3.Expression or Script
+==================== 
+<#function avg x y>
+  <#return (x + y) / 2>
+</#function>
+${avg(10, 20)}
+
+	|||
+	VVV
+====================
+8.3.RESULT
+==================== 
+15
+
+
+====================
+8.4.Expression or Script
+==================== 
+<#function avg nums...>
+  <#local sum = 0>
+  <#list nums as num>
+    <#local sum += num>
+  </#list>
+  <#if nums?size != 0>
+    <#return sum / nums?size>
+  </#if>
+</#function>
+${avg(10, 20)}
+${avg(10, 20, 30, 40)}
+${avg()!"N/A"}
+
+	|||
+	VVV
+====================
+8.4.RESULT
+==================== 
+15
+25
+N/A
+
+
+9. global Directive --------------------------------------------------------------------------------------------------->
+====================
+9.1.Expression or Script
+==================== 
+<#global name="value">
+<#global name1="value1" name2=2 >
+<#global name3>
+  capture this
+</#global>
+
+${name}
+${name1}
+${name2}
+${name3}
+
+	|||
+	VVV
+====================
+9.1.RESULT
+==================== 
+
+value
+value1
+2
+  capture this
+

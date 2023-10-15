@@ -1,0 +1,29 @@
+====================================================================================================================================
+-- Apache FreeMarker 2.3.26 - Factor User Defined Subroutines - Private System One Generation Example -------
+====================================================================================================================================
+PRV_SYS_GEN_PATH 		= one-path
+PRV_SYS_GEN_TYPE 		= one
+PRV_SYS_GEN_FILENAME 	= factor.user.defined.subroutines.7.private.system.one.change-filename.txt
+PRV_SYS_IS_REPLACE 		= true
+
+
+====================================================================================================================================
+A. One Generation Type Logic Rule
+====================================================================================================================================
+1. Applicable for file and not for folder
+2. Folder will always Copy Operation
+3. File Name Handling:
+   Remove '.ftl' file extension if has in last file name. e.g. Person.java.ftl will become Person.java
+4. Applicable Private System Attributes File:
+   a. PRV_SYS_GEN_TYPE:
+      Private System placeholder for define Generation Type options (one, many, copy)
+   b. PRV_SYS_GEN_PATH: 
+      Private System placeholder for create generated relative path, relative to Root Directory Deployment as base path
+   c. PRV_SYS_GEN_FILENAME:
+      Private System placeholder for define file name that need to be generated, if required to be different with template name. 
+	  Remove '.ftl' file extension if has in last file name.
+   d. PRV_SYS_IS_REPLACE:
+      Private System placeholder for replace file (true or false), if false then it will create additional suffix on its file name
+5. All The Factor FreeMarker Directives, Predefined Subroutines, User Defined Subroutines, Private System Attributes, Public Attributes,
+   Private (File) Attributes will be replaced by its value, it will be rendered, it will be changed.
+
