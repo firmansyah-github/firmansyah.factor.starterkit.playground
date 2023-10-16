@@ -10,20 +10,22 @@ PRV_SYS_IS_REPLACE 		= true
 ====================================================================================================================================
 A. One Generation Type Logic Rule
 ====================================================================================================================================
-1. Applicable for file and not for folder
-2. Folder will always Copy Operation
+1. This applies to files but not folders.
+2. Folders will always undergo a copy operation.
 3. File Name Handling:
-   Remove '.ftl' file extension if has in last file name. e.g. Person.java.ftl will become Person.java
-4. Applicable Private System Attributes File:
+   - Remove the '.ftl' file extension if it exists at the end of the file name. For example, 'Person.java.ftl' will become 'Person.java.'
+4. Applicable Private System Attributes for Files:
    a. PRV_SYS_GEN_TYPE:
-      Private System placeholder for define Generation Type options (one, many, copy)
-   b. PRV_SYS_GEN_PATH: 
-      Private System placeholder for create generated relative path, relative to Root Directory Deployment as base path
+      - A private system placeholder to define Generation Type options (one, many, copy). Used 'one' for this case.
+      - If not provided, it will default to 'copy' generation.
+   b. PRV_SYS_GEN_PATH:
+      - A private system placeholder to create a generated relative path, relative to the Root Directory Deployment as the base path.
+      - If not provided, it will not create any custom path and will be rendered in the Root Directory Deployment.
    c. PRV_SYS_GEN_FILENAME:
-      Private System placeholder for define file name that need to be generated, if required to be different with template name. 
-	  Remove '.ftl' file extension if has in last file name.
+      - A private system placeholder to define the file name that needs to be generated, if it's required to be different from the template name.
+      - Remove the '.ftl' file extension if it exists at the end of the file name.
+      - If not provided, it will use the filename as is.
    d. PRV_SYS_IS_REPLACE:
-      Private System placeholder for replace file (true or false), if false then it will create additional suffix on its file name
-5. All The Factor FreeMarker Directives, Predefined Subroutines, User Defined Subroutines, Private System Attributes, Public Attributes,
-   Private (File) Attributes will be replaced by its value, it will be rendered, it will be changed.
-
+      - A private system placeholder to determine whether the file should be replaced (true or false). If set to false, an additional suffix will be added to the file name.
+      - If not provided, it will default to 'false.'
+5. All Factor FreeMarker Directives, Predefined Subroutines, User-Defined Subroutines, Public and Private System Attributes, Public Attributes, and Private (File) Attributes will be replaced by their values, rendered, and changed.

@@ -1,0 +1,79 @@
+====================================================================================================================================
+-- Apache FreeMarker 2.3.26 - Factor User Defined Subroutines - Public System Data Type Mapping Generation Example -------
+====================================================================================================================================
+
+====================================================================================================================================
+A. Public System Data Type Mapping Logic Rule
+====================================================================================================================================
+1. The Factor automatically proposes a default mapping between database data types and Java data types.
+2. You can customize this mapping in the "Field Editor" dialog window.
+3. You have the option to override this mapping by using the "Public System Data Type Mapping."
+4. The "Public System Data Type Mapping" offers greater flexibility in handling mappings between diverse database data types and various programming language data types.
+5. Key Attributes of the Public System Data Type Mapping Pattern:
+   a. ${PUB_SYS_DTM@DB_DT_TYPE|PL_DT_TYPE|Description}
+   b. DB_DT_TYPE represents the database data type.
+   c. PL_DT_TYPE represents the programming language data type.
+   d. "PUB_SYS_DTM" is the designated keyword for this Public System Data Type Mapping Logic Rule.
+6. The "Public System Data Type Mapping" is applied when "PRV_SYS_GEN_TYPE" is set to 'one' or 'many'.
+====================================================================================================================================
+B. Public System Data Type Mapping  - POSTGRES VS JAVA
+====================================================================================================================================
+ 
+  	1: articles
+                fieldList                    : 
+					fieldType           -->  String      
+                    fieldName           -->  id      
+                     
+                    columnType          -->  varchar     
+                    columnName          -->  id     
+                    
+					fieldType           -->  String      
+                    fieldName           -->  body      
+                     
+                    columnType          -->  varchar     
+                    columnName          -->  body     
+                    
+					fieldType           -->  String      
+                    fieldName           -->  description      
+                     
+                    columnType          -->  varchar     
+                    columnName          -->  description     
+                    
+
+  	2: comments
+                fieldList                    : 
+					fieldType           -->  String      
+                    fieldName           -->  id      
+                     
+                    columnType          -->  varchar     
+                    columnName          -->  id     
+                    
+					fieldType           -->  String      
+                    fieldName           -->  body      
+                     
+                    columnType          -->  varchar     
+                    columnName          -->  body     
+                    
+					fieldType           -->  java.time.LocalDateTime      
+                    fieldName           -->  createdat      
+                     
+                    columnType          -->  timestamp     
+                    columnName          -->  createdat     
+                    
+
+  	3: favorite_relationship
+                fieldList                    : 
+					fieldType           -->  String      
+                    fieldName           -->  userId      
+                     
+                    columnType          -->  varchar     
+                    columnName          -->  user_id     
+                    
+					fieldType           -->  String      
+                    fieldName           -->  articleId      
+                     
+                    columnType          -->  varchar     
+                    columnName          -->  article_id     
+                    
+
+    

@@ -10,41 +10,48 @@ PRV_SYS_JAVA_PACKAGE    = id.co.factor.Articles.articles.articles.articles
 ====================================================================================================================================
 A. Many Generation Type Logic Rule
 ====================================================================================================================================
-1. Applicable for file and not for folder
-2. Folder will always Copy Operation
+1. Applicable only to files and not folders.
+2. Folders will always undergo the copy operation.
 3. File Name Handling:
-   a. Remove '.ftl' file extension if has in last file name. e.g. Person.java.ftl will become Person.java
-   b. File name may have placeholder, e.g. [phType]Model.java.ftl or Domain[phType]DTO.java.ftl
-	  [phType] options are:
-      [table] 	: replaced by Table Name
-      [base]  	: replaced by Base Name
-      [class] 	: replaces by Class Name
-      [instance]: replaced by Instance Name
-4. Applicable Private System Attributes File:
-   a. PRV_SYS_GEN_TYPE:
-      Private System placeholder for define Generation Type options (one, many, copy)
-   b. PRV_SYS_GEN_PATH: 
-      Private System placeholder for create generated relative path, relative to Root Directory Deployment as base path
-      Auto create directory based on value definition 
-      [table] 	: replaced by Table Name
-      [base]  	: replaced by Base Name
-      [class] 	: replaces by Class Name
-      [instance]: replaced by Instance Name
+   a. Remove the '.ftl' file extension if it is present at the end of the file name. For example, "Person.java.ftl" will become "Person.java."
+   b. File names may contain placeholders, such as "[phType]Model.java.ftl" or "Domain[phType]DTO.java.ftl." The available options for "[phType]" are:
+      - "[table]"  : to be replaced by the table name
+      - "[base]"   : to be replaced by the base name
+      - "[class]"  : to be replaced by the class name
+      - "[instance]": to be replaced by the instance name
+4. Applicable Private System Attributes for Files:
+   a. PRV_SYS_GEN_TYPE: 
+      A private system placeholder to define generation type options (one, many, copy). Used 'many' for this case.
+      If not provided, the default generation type used is 'copy.'
+      
+   b. PRV_SYS_GEN_PATH:
+      A private system placeholder to define the generated relative path relative to the Root Directory Deployment as the base path. 
+      If not provided, no custom path is created; it is rendered on the Root Directory Deployment. 
+      Directories are automatically created based on the defined values.
+      - "[table]"  : replaced by the table name
+      - "[base]"   : replaced by the base name
+      - "[class]"  : replaced by the class name
+      - "[instance]": replaced by the instance name
+      Example : "many-path/main/java/[class]/[table]/[instance]/test/[base]"
+      
    c. PRV_SYS_GEN_FILENAME:
-      Private System placeholder for define file name that need to be generated, if required to be different with template name. 
-	  Remove '.ftl' file extension if has in last file name.
+      A private system placeholder to define the file name that needs to be generated. 
+      If a custom file name is required, it should be specified. 
+      The '.ftl' file extension is removed if it exists at the end of the file name. If not provided, the file name remains as is.
+      
    d. PRV_SYS_IS_REPLACE:
-      Private System placeholder for replace file (true or false), if false then it will create additional suffix on its file name.
-   e. PRV_SYS_GEN_FILENAME:
-      Private System placeholder for define file name that need to be generated, if required to be different with template name. 
-      Remove '.ftl' file extension if has in last file name.
-      File name may have placeholder
-   f. PRV_SYS_JAVA_PACKAGE:
-      Private System placeholder for define package name and auto create directory based on value definition 
-      e.g. id.co.factor.[table].[base].[class].[instance]
-      [table] 	: replaced by Table Name
-      [base]  	: replaced by Base Name
-      [class] 	: replaces by Class Name
-      [instance]: replaced by Instance Name
-5. All The Factor FreeMarker Directives, Predefined Subroutines, User Defined Subroutines, Private System Attributes, Public Attributes,
-   Private (File) Attributes will be replaced by its value, it will be rendered, it will be changed.
+      A private system placeholder to determine whether to replace the file (true or false). 
+      If set to 'false,' an additional suffix is added to the file name. 
+      If not provided, the default value is 'false.'
+      
+   e. PRV_SYS_JAVA_PACKAGE:
+      A private system placeholder to define the package name and automatically create directories based on the defined values. 
+      For example: "id.co.factor.[table].[base].[class].[instance]"
+      - "[table]"  : replaced by the table name
+      - "[base]"   : replaced by the base name
+      - "[class]"  : replaced by the class name
+      - "[instance]": replaced by the instance name
+5. All Factor FreeMarker Directives, Predefined Subroutines, User-Defined Subroutines, Public and Private System Attributes, Public Attributes, and Private (File) Attributes will have their values replaced, rendered, and changed.
+6. The full path of the gnerated file is created according to the following pattern:
+   [Root Directory Deployment] + [PRV_SYS_GEN_PATH] + [PRV_SYS_JAVA_PACKAGE] + [PRV_SYS_GEN_FILENAME]
+   Ensure the path combination between PRV_SYS_GEN_PATH and PRV_SYS_JAVA_PACKAGE is correctly configured.

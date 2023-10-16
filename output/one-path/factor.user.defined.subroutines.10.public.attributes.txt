@@ -1,0 +1,33 @@
+====================================================================================================================================
+-- Apache FreeMarker 2.3.26 - Factor User Defined Subroutines - Public Attributes Example -------
+====================================================================================================================================
+
+====================================================================================================================================
+A. Public Attributes Logic Rule
+====================================================================================================================================
+
+1. Public Attributes Pattern:
+   a. Use the following pattern: "${PUB_XXXXX|VALUE|Description}".
+   b. You have the flexibility to customize "XXXXX" within "PUB_XXXXX" to your preferred name, but retain the "PUB_" prefix.
+   c. Replace "VALUE" with the desired value of your choice.
+   d. You can also replace "Description" with any description that suits your documentation needs.
+
+2. The Same Public Attribute Definitions in Multiple File Templates:
+   a. Public attribute definitions can exist within multiple file templates.
+   b. The values of these public attributes are derived from the most recently modified file template.
+
+3. Modifying Public Attributes:
+   a. You can modify the values of public attributes within the Public Attributes table.
+   b. These modified values take precedence over those in the individual files.
+   
+====================================================================================================================================
+B. Public Attributes
+====================================================================================================================================
+PUB_DB_TYPE	: postgresql
+PUB_APP_IP	: localhost
+PUB_DB_IP	: localhost
+PUB_DB_PORT	: 5432
+PUB_DB_USER	: postgres
+PUB_DB_NAME	: postgres
+PUB_DB_PASS	: P@ssw0rd
+PUB_APP_PKG	: realworld-api-quarkus    

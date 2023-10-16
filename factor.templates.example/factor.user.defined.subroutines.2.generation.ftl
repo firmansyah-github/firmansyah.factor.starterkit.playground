@@ -51,7 +51,7 @@ Expression or Script   										-> RESULT
 <#noparse>${adv.generation.create?c}</#noparse>							->	${adv.generation.create?c}
 
 <#-- DO NOT USED -->
-<#--
+<#-- IF YOU WANT TO TRY REMOVE THIS LINE COMMENTS 
 <#noparse>${adv.generation.setOutputDir('outputDir')}</#noparse>		->	${adv.generation.setOutputDir('outputDir')}
 <#noparse>${adv.generation.outputDir}</#noparse>						->	${adv.generation.outputDir}
 
@@ -74,7 +74,8 @@ Expression or Script   										-> RESULT
 
 <#noparse>${adv.generation.setTemplateDir('templateDir')}</#noparse>	->	${adv.generation.setTemplateDir('templateDir')}
 <#noparse>${adv.generation.templateDir}</#noparse>						->	${adv.generation.templateDir}
--->
+
+IF YOU WANT TO TRY REMOVE THIS LINE COMMENTS -->
 
 
 

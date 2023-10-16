@@ -1,0 +1,33 @@
+====================================================================================================================================
+-- Apache FreeMarker 2.3.26 - Factor User Defined Subroutines - Private (File) Attributes Example -------
+====================================================================================================================================
+
+====================================================================================================================================
+A. Private (File) Attributes Logic Rule
+====================================================================================================================================
+
+1. Private (File) Attributes Pattern:
+   a. Use the following pattern: "${PRV_XXXXX|VALUE|Description}".
+   b. You have the flexibility to customize "XXXXX" within "PRV_XXXXX" to your preferred name, but retain the "PRV_" prefix.
+   c. Replace "VALUE" with the desired value of your choice.
+   d. You can also replace "Description" with any description that suits your documentation needs.
+
+2. The Same Private (File) Attribute Definitions in Multiple File Templates:
+   a. Private (File) attribute definitions can exist within multiple file templates.
+   b. The values of these Private (File) attributes are derived from value in each file template.
+
+3. Modifying Private (File) Attributes:
+   a. You can modify the values of Private (File) attributes within the Private (File) Attributes table.
+   b. These modified values take precedence over those in the individual files.
+   
+====================================================================================================================================
+B. Public Attributes
+====================================================================================================================================
+PRV_DB_TYPE	: postgresql
+PRV_APP_IP	: localhost
+PRV_DB_IP	: localhost
+PRV_DB_PORT	: 5432
+PRV_DB_USER	: postgres
+PRV_DB_NAME	: postgres
+PRV_DB_PASS	: P@ssw0rd
+PRV_APP_PKG	: realworld-api-quarkus    

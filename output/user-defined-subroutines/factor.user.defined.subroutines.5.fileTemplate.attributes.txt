@@ -31,6 +31,43 @@ A. File Templates, Default Attr, Public Attr, File Attr - Factor Subroutines ---
 ====================
 2. filePublicAttrs RESULT
 ====================
+  	PUB_SYS_DTM@double, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@4f28da47
+  	PUB_DB_TYPE, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@ed388718
+  	PUB_SYS_DTM@date, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@701f7e4
+  	PUB_SYS_DTM@timestamp, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@165a977e
+  	PUB_SYS_DTM@bytea, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@d92bbb41
+  	PUB_SYS_DTM@cidr, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@7019faa
+  	PUB_SYS_DTM@tsquery, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@eaf9ae51
+  	PUB_SYS_DTM@text, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@7094d63
+  	PUB_SYS_DTM@interval, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@f953097b
+  	PUB_SYS_DTM@varchar, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@3614dba5
+  	PUB_APP_PKG, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@659b2b2b
+  	PUB_SYS_DTM@enum, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@7029d37
+  	PUB_SYS_DTM@jsonb, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@d999ab62
+  	PUB_SYS_DTM@uuid, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@709fbf1
+  	PUB_DB_IP, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@1c7becc5
+  	PUB_SYS_DTM@macaddr, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@59286e68
+  	PUB_SYS_DTM@bigint, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@4b645965
+  	PUB_SYS_DTM@boolean, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@2bd5d8d0
+  	PUB_APP_IP, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@6ea1e7e6
+  	PUB_DB_PASS, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@ed365bef
+  	PUB_SYS_DTM@bit, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@df319635
+  	PUB_SYS_DTM@integer, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@9cafede6
+  	PUB_SYS_DTM@numeric, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@b0be87b5
+  	PUB_XXXXX, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@1d9faa95
+  	PUB_SYS_DTM@DB_DT_TYPE, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@9ab3bdbe
+  	PUB_SYS_DTM@char, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@7019b8c
+  	PUB_SYS_DTM@time, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@7095b03
+  	PUB_SYS_DTM@inet, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@7046cca
+  	PUB_DB_USER, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@ed38e3a9
+  	PUB_SYS_DTM@smallint, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@b32c363e
+  	PUB_DB_PORT, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@ed36905f
+  	PUB_SYS_DTM@tsvector, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@7be1f938
+  	PUB_SYS_DTM@json, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@704f51e
+  	PUB_SYS_DTM@decimal, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@83e77ff9
+  	PUB_SYS_DTM@real, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@70861d4
+  	PUB_SYS_DTM@character, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@704d2991
+  	PUB_DB_NAME, firmansyah.adv.crud.gen.domain.domain.FilePublicAttr@ed357269
 
 
 ====================================================================================================================================
@@ -41,29 +78,243 @@ Expression or Script   										-> RESULT
   	create					: true
   	generatedPath			: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output
   	generatedType			: copy
-  	name					: factor.directives.1.ftl.outputformat.comment.ftl
-  	path					: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.1.ftl.outputformat.comment.ftl
+  	name					: factor.user.defined.subroutines.11.private.file.attributes.ftl
+  	path					: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.11.private.file.attributes.ftl
   	relativePath			: 
   	selected				: false
-  	size					: 2950
+  	size					: 3203
   	
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Private System placeholder for create generated relative path
+  		name				:  PRV_SYS_GEN_PATH
+  		no					:  1
+  		value				:  one-path
   		allFileAttrSelected	:  false
   		create				:  true
   		desc				:  Please choose one option from this Private Gen type list: one, many, copy
   		name				:  PRV_SYS_GEN_TYPE
-  		no					:  1
+  		no					:  2
   		value				:  one
   		allFileAttrSelected	:  false
   		create				:  true
-  		desc				:  Private System placeholder for define file name that need to be generated, if required to be different with template name
+  		desc				:  Private System placeholder for define file name that need to be generated, if required to be different with template name.
   		name				:  PRV_SYS_GEN_FILENAME
-  		no					:  2
-  		value				:  factor.directives.1.ftl.outputformat.comment.txt
+  		no					:  3
+  		value				:  factor.user.defined.subroutines.11.private.file.attributes.txt
   		allFileAttrSelected	:  false
   		create				:  true
   		desc				:  Private System placeholder for replace previous generated file or create unique file name,list:true,false
   		name				:  PRV_SYS_IS_REPLACE
+  		no					:  4
+  		value				:  true
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  db2, postgresql, oracle, sqlserver, mysql
+  		name				:  PRV_DB_TYPE
+  		no					:  5
+  		value				:  postgresql
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Description
+  		name				:  PRV_APP_IP
+  		no					:  6
+  		value				:  localhost
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Description
+  		name				:  PRV_DB_IP
+  		no					:  7
+  		value				:  localhost
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  db2-50000, postgresql-5432, oracle-1521, sqlserver-1433, mysql-3306
+  		name				:  PRV_DB_PORT
+  		no					:  8
+  		value				:  5432
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  db2-dbadm, postgresql-postgres, oracle-system, sqlserver-sa, mysql-myuser
+  		name				:  PRV_DB_USER
+  		no					:  9
+  		value				:  postgres
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  db2-MYDB, postgresql-postgres, oracle-ORCLPDB1, sqlserver-Express, mysql-mydb
+  		name				:  PRV_DB_NAME
+  		no					:  10
+  		value				:  postgres
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Description
+  		name				:  PRV_DB_PASS
+  		no					:  11
+  		value				:  P@ssw0rd
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Description
+  		name				:  PRV_APP_PKG
+  		no					:  12
+  		value				:  realworld-api-quarkus
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Description
+  		name				:  PRV_XXXXX
+  		no					:  13
+  		value				:  VALUE
+  	
+  	
+                                                                            
+	absolutePath			: 
+  	allFileAttrSelected		: true
+  	create					: true
+  	generatedPath			: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output
+  	generatedType			: copy
+  	name					: factor-config-example.xml
+  	path					: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor-config-example.xml
+  	relativePath			: 
+  	selected				: false
+  	size					: 52220
+  	
+  	
+  	
+                                                                            
+	absolutePath			: 
+  	allFileAttrSelected		: true
+  	create					: true
+  	generatedPath			: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output
+  	generatedType			: copy
+  	name					: factor.user.defined.subroutines.9.public.system.datatype.mapping.ftl
+  	path					: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.9.public.system.datatype.mapping.ftl
+  	relativePath			: 
+  	selected				: false
+  	size					: 4614
+  	
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Private System placeholder for create generated relative path
+  		name				:  PRV_SYS_GEN_PATH
+  		no					:  1
+  		value				:  one-path
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Please choose one option from this Private Gen type list: one, many, copy
+  		name				:  PRV_SYS_GEN_TYPE
+  		no					:  2
+  		value				:  one
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Private System placeholder for define file name that need to be generated, if required to be different with template name.
+  		name				:  PRV_SYS_GEN_FILENAME
   		no					:  3
+  		value				:  factor.user.defined.subroutines.9.public.system.datatype.mapping.txt
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Private System placeholder for replace previous generated file or create unique file name,list:true,false
+  		name				:  PRV_SYS_IS_REPLACE
+  		no					:  4
+  		value				:  true
+  	
+  	
+                                                                            
+	absolutePath			: 
+  	allFileAttrSelected		: true
+  	create					: true
+  	generatedPath			: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output
+  	generatedType			: copy
+  	name					: factor.user.defined.subroutines.10.public.attributes.ftl
+  	path					: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.10.public.attributes.ftl
+  	relativePath			: 
+  	selected				: false
+  	size					: 3138
+  	
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Private System placeholder for create generated relative path
+  		name				:  PRV_SYS_GEN_PATH
+  		no					:  1
+  		value				:  one-path
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Please choose one option from this Private Gen type list: one, many, copy
+  		name				:  PRV_SYS_GEN_TYPE
+  		no					:  2
+  		value				:  one
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Private System placeholder for define file name that need to be generated, if required to be different with template name.
+  		name				:  PRV_SYS_GEN_FILENAME
+  		no					:  3
+  		value				:  factor.user.defined.subroutines.10.public.attributes.txt
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Private System placeholder for replace previous generated file or create unique file name,list:true,false
+  		name				:  PRV_SYS_IS_REPLACE
+  		no					:  4
+  		value				:  true
+  	
+  	
+                                                                            
+	absolutePath			: 
+  	allFileAttrSelected		: true
+  	create					: true
+  	generatedPath			: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output
+  	generatedType			: copy
+  	name					: factor.user.defined.subroutines.6.private.system.copy.ftl
+  	path					: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.6.private.system.copy.ftl
+  	relativePath			: 
+  	selected				: false
+  	size					: 2150
+  	
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Private System placeholder for create generated relative path
+  		name				:  PRV_SYS_GEN_PATH
+  		no					:  1
+  		value				:  copy-path
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Please choose one option from this Private Gen type list: one, many, copy
+  		name				:  PRV_SYS_GEN_TYPE
+  		no					:  2
+  		value				:  copy
+  	
+  	
+                                                                            
+	absolutePath			: 
+  	allFileAttrSelected		: true
+  	create					: true
+  	generatedPath			: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output
+  	generatedType			: copy
+  	name					: factor.user.defined.subroutines.7.private.system.one.ftl
+  	path					: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.7.private.system.one.ftl
+  	relativePath			: 
+  	selected				: false
+  	size					: 3018
+  	
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Private System placeholder for create generated relative path
+  		name				:  PRV_SYS_GEN_PATH
+  		no					:  1
+  		value				:  one-path
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Please choose one option from this Private Gen type list: one, many, copy
+  		name				:  PRV_SYS_GEN_TYPE
+  		no					:  2
+  		value				:  one
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Private System placeholder for define file name that need to be generated, if required to be different with template name.
+  		name				:  PRV_SYS_GEN_FILENAME
+  		no					:  3
+  		value				:  factor.user.defined.subroutines.7.private.system.one.change-filename.txt
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Private System placeholder for replace previous generated file or create unique file name,list:true,false
+  		name				:  PRV_SYS_IS_REPLACE
+  		no					:  4
   		value				:  true
   	
   	
@@ -77,7 +328,7 @@ Expression or Script   										-> RESULT
   	path					: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.8.private.system.many.ftl
   	relativePath			: 
   	selected				: false
-  	size					: 3995
+  	size					: 4788
   	
   		allFileAttrSelected	:  false
   		create				:  true
@@ -117,12 +368,106 @@ Expression or Script   										-> RESULT
   	create					: true
   	generatedPath			: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output
   	generatedType			: copy
-  	name					: factor-config-example.xml
-  	path					: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor-config-example.xml
+  	name					: factor.user.defined.subroutines.2.generation.ftl
+  	path					: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.2.generation.ftl
   	relativePath			: 
   	selected				: false
-  	size					: 39324
+  	size					: 6883
   	
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Private System placeholder for create generated relative path
+  		name				:  PRV_SYS_GEN_PATH
+  		no					:  1
+  		value				:  user-defined-subroutines
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Please choose one option from this Private Gen type list: one, many, copy
+  		name				:  PRV_SYS_GEN_TYPE
+  		no					:  2
+  		value				:  one
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Private System placeholder for define file name that need to be generated, if required to be different with template name
+  		name				:  PRV_SYS_GEN_FILENAME
+  		no					:  3
+  		value				:  factor.user.defined.subroutines.2.generation.txt
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Private System placeholder for replace previous generated file or create unique file name,list:true,false
+  		name				:  PRV_SYS_IS_REPLACE
+  		no					:  4
+  		value				:  true
+  	
+  	
+                                                                            
+	absolutePath			: 
+  	allFileAttrSelected		: true
+  	create					: true
+  	generatedPath			: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output
+  	generatedType			: copy
+  	name					: factor.user.defined.subroutines.3.draftTemplate.ftl
+  	path					: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.3.draftTemplate.ftl
+  	relativePath			: 
+  	selected				: false
+  	size					: 5489
+  	
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Private System placeholder for create generated relative path
+  		name				:  PRV_SYS_GEN_PATH
+  		no					:  1
+  		value				:  user-defined-subroutines
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Please choose one option from this Private Gen type list: one, many, copy
+  		name				:  PRV_SYS_GEN_TYPE
+  		no					:  2
+  		value				:  one
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Private System placeholder for define file name that need to be generated, if required to be different with template name
+  		name				:  PRV_SYS_GEN_FILENAME
+  		no					:  3
+  		value				:  factor.user.defined.subroutines.3.draftTemplate.txt
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Private System placeholder for replace previous generated file or create unique file name,list:true,false
+  		name				:  PRV_SYS_IS_REPLACE
+  		no					:  4
+  		value				:  true
+  	
+  	
+                                                                            
+	absolutePath			: 
+  	allFileAttrSelected		: true
+  	create					: true
+  	generatedPath			: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output
+  	generatedType			: copy
+  	name					: factor.directives.1.ftl.outputformat.comment.ftl
+  	path					: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.1.ftl.outputformat.comment.ftl
+  	relativePath			: 
+  	selected				: false
+  	size					: 2950
+  	
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Please choose one option from this Private Gen type list: one, many, copy
+  		name				:  PRV_SYS_GEN_TYPE
+  		no					:  1
+  		value				:  one
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Private System placeholder for define file name that need to be generated, if required to be different with template name
+  		name				:  PRV_SYS_GEN_FILENAME
+  		no					:  2
+  		value				:  factor.directives.1.ftl.outputformat.comment.txt
+  		allFileAttrSelected	:  false
+  		create				:  true
+  		desc				:  Private System placeholder for replace previous generated file or create unique file name,list:true,false
+  		name				:  PRV_SYS_IS_REPLACE
+  		no					:  3
+  		value				:  true
   	
   	
                                                                             
@@ -307,82 +652,6 @@ Expression or Script   										-> RESULT
   		name				:  PRV_SYS_GEN_FILENAME
   		no					:  3
   		value				:  factor.user.defined.subroutines.1.database.txt
-  		allFileAttrSelected	:  false
-  		create				:  true
-  		desc				:  Private System placeholder for replace previous generated file or create unique file name,list:true,false
-  		name				:  PRV_SYS_IS_REPLACE
-  		no					:  4
-  		value				:  true
-  	
-  	
-                                                                            
-	absolutePath			: 
-  	allFileAttrSelected		: true
-  	create					: true
-  	generatedPath			: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output
-  	generatedType			: copy
-  	name					: factor.user.defined.subroutines.2.generation.ftl
-  	path					: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.2.generation.ftl
-  	relativePath			: 
-  	selected				: false
-  	size					: 6790
-  	
-  		allFileAttrSelected	:  false
-  		create				:  true
-  		desc				:  Private System placeholder for create generated relative path
-  		name				:  PRV_SYS_GEN_PATH
-  		no					:  1
-  		value				:  user-defined-subroutines
-  		allFileAttrSelected	:  false
-  		create				:  true
-  		desc				:  Please choose one option from this Private Gen type list: one, many, copy
-  		name				:  PRV_SYS_GEN_TYPE
-  		no					:  2
-  		value				:  one
-  		allFileAttrSelected	:  false
-  		create				:  true
-  		desc				:  Private System placeholder for define file name that need to be generated, if required to be different with template name
-  		name				:  PRV_SYS_GEN_FILENAME
-  		no					:  3
-  		value				:  factor.user.defined.subroutines.2.generation.txt
-  		allFileAttrSelected	:  false
-  		create				:  true
-  		desc				:  Private System placeholder for replace previous generated file or create unique file name,list:true,false
-  		name				:  PRV_SYS_IS_REPLACE
-  		no					:  4
-  		value				:  true
-  	
-  	
-                                                                            
-	absolutePath			: 
-  	allFileAttrSelected		: true
-  	create					: true
-  	generatedPath			: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output
-  	generatedType			: copy
-  	name					: factor.user.defined.subroutines.3.draftTemplate.ftl
-  	path					: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.3.draftTemplate.ftl
-  	relativePath			: 
-  	selected				: false
-  	size					: 5405
-  	
-  		allFileAttrSelected	:  false
-  		create				:  true
-  		desc				:  Private System placeholder for create generated relative path
-  		name				:  PRV_SYS_GEN_PATH
-  		no					:  1
-  		value				:  user-defined-subroutines
-  		allFileAttrSelected	:  false
-  		create				:  true
-  		desc				:  Please choose one option from this Private Gen type list: one, many, copy
-  		name				:  PRV_SYS_GEN_TYPE
-  		no					:  2
-  		value				:  one
-  		allFileAttrSelected	:  false
-  		create				:  true
-  		desc				:  Private System placeholder for define file name that need to be generated, if required to be different with template name
-  		name				:  PRV_SYS_GEN_FILENAME
-  		no					:  3
-  		value				:  factor.user.defined.subroutines.3.draftTemplate.txt
   		allFileAttrSelected	:  false
   		create				:  true
   		desc				:  Private System placeholder for replace previous generated file or create unique file name,list:true,false
@@ -769,70 +1038,6 @@ Expression or Script   										-> RESULT
   		name				:  PRV_SYS_IS_REPLACE
   		no					:  4
   		value				:  true
-  	
-  	
-                                                                            
-	absolutePath			: 
-  	allFileAttrSelected		: true
-  	create					: true
-  	generatedPath			: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output
-  	generatedType			: copy
-  	name					: factor.user.defined.subroutines.7.private.system.one.ftl
-  	path					: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.7.private.system.one.ftl
-  	relativePath			: 
-  	selected				: false
-  	size					: 2558
-  	
-  		allFileAttrSelected	:  false
-  		create				:  true
-  		desc				:  Private System placeholder for create generated relative path
-  		name				:  PRV_SYS_GEN_PATH
-  		no					:  1
-  		value				:  one-path
-  		allFileAttrSelected	:  false
-  		create				:  true
-  		desc				:  Please choose one option from this Private Gen type list: one, many, copy
-  		name				:  PRV_SYS_GEN_TYPE
-  		no					:  2
-  		value				:  one
-  		allFileAttrSelected	:  false
-  		create				:  true
-  		desc				:  Private System placeholder for define file name that need to be generated, if required to be different with template name.
-  		name				:  PRV_SYS_GEN_FILENAME
-  		no					:  3
-  		value				:  factor.user.defined.subroutines.7.private.system.one.change-filename.txt
-  		allFileAttrSelected	:  false
-  		create				:  true
-  		desc				:  Private System placeholder for replace previous generated file or create unique file name,list:true,false
-  		name				:  PRV_SYS_IS_REPLACE
-  		no					:  4
-  		value				:  true
-  	
-  	
-                                                                            
-	absolutePath			: 
-  	allFileAttrSelected		: true
-  	create					: true
-  	generatedPath			: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output
-  	generatedType			: copy
-  	name					: factor.user.defined.subroutines.6.private.system.copy.ftl
-  	path					: /Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.6.private.system.copy.ftl
-  	relativePath			: 
-  	selected				: false
-  	size					: 1840
-  	
-  		allFileAttrSelected	:  false
-  		create				:  true
-  		desc				:  Private System placeholder for create generated relative path
-  		name				:  PRV_SYS_GEN_PATH
-  		no					:  1
-  		value				:  copy-path
-  		allFileAttrSelected	:  false
-  		create				:  true
-  		desc				:  Please choose one option from this Private Gen type list: one, many, copy
-  		name				:  PRV_SYS_GEN_TYPE
-  		no					:  2
-  		value				:  copy
   	
   	
                                                                             

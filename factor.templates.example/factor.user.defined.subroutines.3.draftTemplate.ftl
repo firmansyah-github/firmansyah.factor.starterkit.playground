@@ -8,8 +8,8 @@ ${PRV_SYS_IS_REPLACE|true|Private System placeholder for replace previous genera
 
 =====================================================================================================================
 -- Apache FreeMarker 2.3.26 - Factor User Defined Subroutines - Draft Template Example -------
-This Draft Template User Defined Subroutines is not used for generating template basically
-Only used by the process of scanning existing source code and generating draft template
+This Draft Template User Defined Subroutines is not used for generating template.
+Only used by the process of scanning existing source code and generating draft template.
 =====================================================================================================================
 =====================================================================================================================
 A. Draft Template - Factor Subroutines ------------------------------------------------------------------------------------
@@ -57,6 +57,10 @@ B. [WARNING] Override Generation - Factor Subroutines --------------------------
 =====================================================================================================================
 Expression or Script   										-> RESULT
 =====================================================================================================================
+
+
+<#-- DO NOT USED -->
+<#-- IF YOU WANT TO TRY REMOVE THIS LINE COMMENTS 
 <#noparse>${adv.draftTemplate.setAppDir('appDir')}</#noparse>				->	${adv.draftTemplate.setAppDir('appDir')}
 <#noparse>${adv.draftTemplate.appDir}</#noparse>							->	${adv.draftTemplate.appDir}
                                                                               
@@ -65,11 +69,7 @@ Expression or Script   										-> RESULT
                                                                               
 <#noparse>${adv.draftTemplate.setDraftDir('draftDir')}</#noparse>			->	${adv.draftTemplate.setDraftDir('draftDir')}
 <#noparse>${adv.draftTemplate.draftDir}</#noparse>							->	${adv.draftTemplate.draftDir}
-
-<#-- DO NOT USED -->
-<#--
-
--->
+IF YOU WANT TO TRY REMOVE THIS LINE COMMENTS  -->
 
 
 

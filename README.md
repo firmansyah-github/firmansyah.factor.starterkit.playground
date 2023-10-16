@@ -37,9 +37,9 @@ In this directory, you'll find various FreeMarker template file examples to help
 | 19  | factor.user.defined.subroutines.3.draftTemplate.ftl   | User-defined draft template subroutines           |
 | 20  | factor.user.defined.subroutines.4.entity.field.pk.fk.ftl | User-defined entity, field, PK, FK subroutines  |
 | 21  | factor.user.defined.subroutines.5.fileTemplate.attributes.ftl | User-defined file template attributes subroutines |
-| 22  | factor.user.defined.subroutines.6.private.system.copy.ftl | User-defined private system copy subroutines.<br> Video of Copy Generation Type Demo [Watch](https://www.youtube.com/watch?v=1303vgwI8x8&t=55s)     |
-| 23  | factor.user.defined.subroutines.7.private.system.one.ftl | User-defined private system one subroutines. <br> Video of One Generation Type Demo [Watch](https://www.youtube.com/watch?v=1303vgwI8x8&t=394s)     |
-| 24  | factor.user.defined.subroutines.8.private.system.many.ftl | User-defined private system many subroutines. <br> Video of Many Generation Type Demo [Watch](https://www.youtube.com/watch?v=1303vgwI8x8&t=627s)    |
+| 22  | factor.user.defined.subroutines.6.private.system.copy.ftl | User-defined private system copy subroutines     |
+| 23  | factor.user.defined.subroutines.7.private.system.one.ftl | User-defined private system one subroutines      |
+| 24  | factor.user.defined.subroutines.8.private.system.many.ftl | User-defined private system many subroutines    |
 | 25  | factor.user.defined.subroutines.9.public.system.datatype.mapping.ftl | User-defined public system datatype mapping subroutines |
 | 26  | lib/myinclude.ftl and lib/mylib.ftl                    | Library files that can be included or imported as reusable template file                                       |
 

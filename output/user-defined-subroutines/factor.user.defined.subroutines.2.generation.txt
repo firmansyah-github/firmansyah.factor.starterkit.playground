@@ -10,7 +10,7 @@ A. Generation - Factor Subroutines ---------------------------------------------
 =====================================================================================================================
 Expression or Script   										-> RESULT
 =====================================================================================================================
-${adv.buildDate?datetime}							->	Oct 15, 2023, 8:44:36 PM
+${adv.buildDate?datetime}							->	Oct 16, 2023, 8:45:28 PM
                                                                               
 ${adv.comment}    									->	TEST COMMENT ADDITIONAL
                                                                               
@@ -36,7 +36,7 @@ B. [WARNING] Override Generation - Factor Subroutines --------------------------
 Expression or Script   										-> RESULT
 =====================================================================================================================
 ${adv.setBuildDate(.now)}							->	
-${adv.buildDate?datetime}							->	Oct 15, 2023, 8:44:37 PM
+${adv.buildDate?datetime}							->	Oct 16, 2023, 8:45:28 PM
 
 ${adv.setComment('TEST COMMENT ADDITIONAL')}		->	
 ${adv.comment}    									->	TEST COMMENT ADDITIONAL

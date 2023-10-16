@@ -232,6 +232,6 @@ ${""?has_content?c} 										-> false
 
 <#ftl output_format="HTML" auto_esc=false>
 
-Today is ${.now?date} 		-> Today is Oct 15, 2023
-"Page generated: ${.now}" 	-> "Page generated: Oct 15, 2023, 8:44:37 PM"
+Today is ${.now?date} 		-> Today is Oct 16, 2023
+"Page generated: ${.now}" 	-> "Page generated: Oct 16, 2023, 8:45:28 PM"
 

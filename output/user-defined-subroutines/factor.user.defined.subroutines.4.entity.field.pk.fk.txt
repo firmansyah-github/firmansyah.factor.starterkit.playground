@@ -103,7 +103,7 @@ Expression or Script   										-> RESULT
                     lob                 -->  false            
                     nullable            -->  false       
                     pkPosition          -->  1     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  id      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -136,12 +136,12 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                     create              -->  true         
                     lob                 -->  false            
                     nullable            -->  true       
                     pkPosition          -->  0     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  body      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -174,12 +174,12 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                     create              -->  true         
                     lob                 -->  false            
                     nullable            -->  true       
                     pkPosition          -->  0     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  description      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -212,7 +212,7 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                 
                 
                 fieldListExceptLob           : 
@@ -220,7 +220,7 @@ Expression or Script   										-> RESULT
                     lob                 -->  false            
                     nullable            -->  false       
                     pkPosition          -->  1     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  id      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -253,12 +253,12 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                     create              -->  true         
                     lob                 -->  false            
                     nullable            -->  true       
                     pkPosition          -->  0     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  body      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -291,12 +291,12 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                     create              -->  true         
                     lob                 -->  false            
                     nullable            -->  true       
                     pkPosition          -->  0     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  description      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -329,14 +329,14 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                 
                 primaryKeyFieldList          : 
                     create              -->  true         
                     lob                 -->  false            
                     nullable            -->  false       
                     pkPosition          -->  1     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  id      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -369,14 +369,14 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                 
                 fieldListExceptForeignKey           : 
                     create              -->  true         
                     lob                 -->  false            
                     nullable            -->  false       
                     pkPosition          -->  1     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  id      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -409,12 +409,12 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                     create              -->  true         
                     lob                 -->  false            
                     nullable            -->  true       
                     pkPosition          -->  0     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  body      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -447,12 +447,12 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                     create              -->  true         
                     lob                 -->  false            
                     nullable            -->  true       
                     pkPosition          -->  0     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  description      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -485,7 +485,7 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                 
                 
                 fieldListSortByOrdinalPosition           : 
@@ -493,7 +493,7 @@ Expression or Script   										-> RESULT
                     lob                 -->  false            
                     nullable            -->  false       
                     pkPosition          -->  1     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  id      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -526,12 +526,12 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                     create              -->  true         
                     lob                 -->  false            
                     nullable            -->  true       
                     pkPosition          -->  0     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  body      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -564,12 +564,12 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                     create              -->  true         
                     lob                 -->  false            
                     nullable            -->  true       
                     pkPosition          -->  0     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  description      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -602,7 +602,7 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                 
                 importClassNameList          : 
                 
@@ -616,7 +616,7 @@ Expression or Script   										-> RESULT
                     lob                 -->  false            
                     nullable            -->  false       
                     pkPosition          -->  1     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  id      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -649,7 +649,7 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                 
                 
                 Test: : articles
@@ -719,7 +719,7 @@ Expression or Script   										-> RESULT
                     lob                 -->  false            
                     nullable            -->  false       
                     pkPosition          -->  1     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  id      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -752,12 +752,12 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                     create              -->  true         
                     lob                 -->  false            
                     nullable            -->  true       
                     pkPosition          -->  0     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  body      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -790,12 +790,12 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                     create              -->  true         
                     lob                 -->  false            
                     nullable            -->  true       
                     pkPosition          -->  0     
-                    fieldType           -->  java.sql.Timestamp      
+                    fieldType           -->  java.time.LocalDateTime      
                     fieldName           -->  createdat      
                     columnSize          -->  29     
                     columnType          -->  timestamp     
@@ -820,8 +820,8 @@ Expression or Script   										-> RESULT
                     primitiveType      	-->  false
                     reservedFieldName   -->  false
                     setterMethodName    -->  setCreatedat
-                    simpleFieldType     -->  Timestamp
-                    simpleObjectClassName  -->  Timestamp
+                    simpleFieldType     -->  LocalDateTime
+                    simpleObjectClassName  -->  LocalDateTime
                     toPrimitiveMethod   -->  null
                     unique   			-->  false
                     validColumnSize     -->  true
@@ -836,7 +836,7 @@ Expression or Script   										-> RESULT
                     lob                 -->  false            
                     nullable            -->  false       
                     pkPosition          -->  1     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  id      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -869,12 +869,12 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                     create              -->  true         
                     lob                 -->  false            
                     nullable            -->  true       
                     pkPosition          -->  0     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  body      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -907,12 +907,12 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                     create              -->  true         
                     lob                 -->  false            
                     nullable            -->  true       
                     pkPosition          -->  0     
-                    fieldType           -->  java.sql.Timestamp      
+                    fieldType           -->  java.time.LocalDateTime      
                     fieldName           -->  createdat      
                     columnSize          -->  29     
                     columnType          -->  timestamp     
@@ -937,8 +937,8 @@ Expression or Script   										-> RESULT
                     primitiveType      	-->  false
                     reservedFieldName   -->  false
                     setterMethodName    -->  setCreatedat
-                    simpleFieldType     -->  Timestamp
-                    simpleObjectClassName  -->  Timestamp
+                    simpleFieldType     -->  LocalDateTime
+                    simpleObjectClassName  -->  LocalDateTime
                     toPrimitiveMethod   -->  null
                     unique   			-->  false
                     validColumnSize     -->  true
@@ -952,7 +952,7 @@ Expression or Script   										-> RESULT
                     lob                 -->  false            
                     nullable            -->  false       
                     pkPosition          -->  1     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  id      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -985,14 +985,14 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                 
                 fieldListExceptForeignKey           : 
                     create              -->  true         
                     lob                 -->  false            
                     nullable            -->  false       
                     pkPosition          -->  1     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  id      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -1025,12 +1025,12 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                     create              -->  true         
                     lob                 -->  false            
                     nullable            -->  true       
                     pkPosition          -->  0     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  body      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -1063,12 +1063,12 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                     create              -->  true         
                     lob                 -->  false            
                     nullable            -->  true       
                     pkPosition          -->  0     
-                    fieldType           -->  java.sql.Timestamp      
+                    fieldType           -->  java.time.LocalDateTime      
                     fieldName           -->  createdat      
                     columnSize          -->  29     
                     columnType          -->  timestamp     
@@ -1093,8 +1093,8 @@ Expression or Script   										-> RESULT
                     primitiveType      	-->  false
                     reservedFieldName   -->  false
                     setterMethodName    -->  setCreatedat
-                    simpleFieldType     -->  Timestamp
-                    simpleObjectClassName  -->  Timestamp
+                    simpleFieldType     -->  LocalDateTime
+                    simpleObjectClassName  -->  LocalDateTime
                     toPrimitiveMethod   -->  null
                     unique   			-->  false
                     validColumnSize     -->  true
@@ -1109,7 +1109,7 @@ Expression or Script   										-> RESULT
                     lob                 -->  false            
                     nullable            -->  false       
                     pkPosition          -->  1     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  id      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -1142,12 +1142,12 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                     create              -->  true         
                     lob                 -->  false            
                     nullable            -->  true       
                     pkPosition          -->  0     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  body      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -1180,12 +1180,12 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                     create              -->  true         
                     lob                 -->  false            
                     nullable            -->  true       
                     pkPosition          -->  0     
-                    fieldType           -->  java.sql.Timestamp      
+                    fieldType           -->  java.time.LocalDateTime      
                     fieldName           -->  createdat      
                     columnSize          -->  29     
                     columnType          -->  timestamp     
@@ -1210,8 +1210,8 @@ Expression or Script   										-> RESULT
                     primitiveType      	-->  false
                     reservedFieldName   -->  false
                     setterMethodName    -->  setCreatedat
-                    simpleFieldType     -->  Timestamp
-                    simpleObjectClassName  -->  Timestamp
+                    simpleFieldType     -->  LocalDateTime
+                    simpleObjectClassName  -->  LocalDateTime
                     toPrimitiveMethod   -->  null
                     unique   			-->  false
                     validColumnSize     -->  true
@@ -1221,10 +1221,10 @@ Expression or Script   										-> RESULT
                     validPatternFieldType   -->  true
                 
                 importClassNameList          : 
-                    java.sql.Timestamp
+                    java.time.LocalDateTime
                 
                 importDeclarations           :
-                    import java.sql.Timestamp;
+                    import java.time.LocalDateTime;
                 
                 
                 
@@ -1234,7 +1234,7 @@ Expression or Script   										-> RESULT
                     lob                 -->  false            
                     nullable            -->  false       
                     pkPosition          -->  1     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  id      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -1267,7 +1267,7 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                 
                 
                 Test: : comments
@@ -1338,7 +1338,7 @@ Expression or Script   										-> RESULT
                     lob                 -->  false            
                     nullable            -->  false       
                     pkPosition          -->  2     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  userId      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -1371,12 +1371,12 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                     create              -->  true         
                     lob                 -->  false            
                     nullable            -->  false       
                     pkPosition          -->  1     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  articleId      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -1409,7 +1409,7 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                 
                 
                 fieldListExceptLob           : 
@@ -1417,7 +1417,7 @@ Expression or Script   										-> RESULT
                     lob                 -->  false            
                     nullable            -->  false       
                     pkPosition          -->  2     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  userId      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -1450,12 +1450,12 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                     create              -->  true         
                     lob                 -->  false            
                     nullable            -->  false       
                     pkPosition          -->  1     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  articleId      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -1488,14 +1488,14 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                 
                 primaryKeyFieldList          : 
                     create              -->  true         
                     lob                 -->  false            
                     nullable            -->  false       
                     pkPosition          -->  1     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  articleId      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -1528,12 +1528,12 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                     create              -->  true         
                     lob                 -->  false            
                     nullable            -->  false       
                     pkPosition          -->  2     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  userId      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -1566,7 +1566,7 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                 
                 fieldListExceptForeignKey           : 
                 
@@ -1576,7 +1576,7 @@ Expression or Script   										-> RESULT
                     lob                 -->  false            
                     nullable            -->  false       
                     pkPosition          -->  2     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  userId      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -1609,12 +1609,12 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                     create              -->  true         
                     lob                 -->  false            
                     nullable            -->  false       
                     pkPosition          -->  1     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  articleId      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -1647,7 +1647,7 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                 
                 importClassNameList          : 
                 
@@ -1661,7 +1661,7 @@ Expression or Script   										-> RESULT
                     lob                 -->  false            
                     nullable            -->  false       
                     pkPosition          -->  1     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  articleId      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -1694,12 +1694,12 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                     create              -->  true         
                     lob                 -->  false            
                     nullable            -->  false       
                     pkPosition          -->  2     
-                    fieldType           -->  java.lang.String      
+                    fieldType           -->  String      
                     fieldName           -->  userId      
                     columnSize          -->  255     
                     columnType          -->  varchar     
@@ -1732,7 +1732,7 @@ Expression or Script   										-> RESULT
                     validFieldType      -->  false
                     validNullable      	-->  true
                     validPatternFieldName   -->  true
-                    validPatternFieldType   -->  true
+                    validPatternFieldType   -->  false
                 
                 
                 Test: : favorite_relationship
