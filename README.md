@@ -84,6 +84,9 @@ To install The Factor Eclipse Plugin via "Install New Software" using a specific
 The Factor Eclipse Plugin should now be successfully installed via the specified update site.
 
 
+[![Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client](https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.svg)](https://marketplace.eclipse.org/marketplace-client-intro?mpc_install=5682451 "Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client")
+
+
 ## How to get a valid license key.
 
 After get Eclipse IDE and The Factor Eclipse Plugin, you need to get a valid license key with following steps:
