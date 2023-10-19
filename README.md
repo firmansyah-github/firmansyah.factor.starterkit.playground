@@ -153,3 +153,10 @@ This video is organized into various sections:
 
 9. **XML Editor (46:33)**: [Visit this part](https://www.youtube.com/watch?v=jFHrv93ieGQ&t=2793s)."
 
+
+
+## The Factor Templates Complete Project Example
+
+1. **Quarkus Backend Templates**:
+   GitHub Repository: [https://github.com/firmansyah-github/firmansyah.template.quarkus.git](https://github.com/firmansyah-github/firmansyah.template.quarkus.git)
+
