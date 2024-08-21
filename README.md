@@ -1,4 +1,4 @@
-# Firmansyah Factor Starter-kit Playgrounds
+# Firmansyah Factor Starter-kit Playground
 
 "Welcome to the Firmansyah Factor Starter-kit Playground GitHub repository. This repository is designed for learning and experimenting with the following components:
 
