@@ -62,3 +62,64 @@ A. Many Generation Type Logic Rule
 6. The full path of the gnerated file is created according to the following pattern:
    [Root Directory Deployment] + [PRV_SYS_GEN_PATH] + [PRV_SYS_JAVA_PACKAGE] + [PRV_SYS_GEN_FILENAME]
    Ensure the path combination between PRV_SYS_GEN_PATH and PRV_SYS_JAVA_PACKAGE is correctly configured.
+
+====================================================================================================================================
+B. AI Prompt Many Generation Type Logic Rule
+====================================================================================================================================
+Here's a **succinct summary** of the FreeMarker data model and logic you provided, optimized for prompting an AI to understand and utilize it correctly:
+
+---
+
+### ✅ **FreeMarker Private System Attribute Model Summary**
+
+FreeMarker template uses embedded comments to define **private system attributes** for code generation. These attributes control how files are generated, named, placed, and packaged. The values are passed using a **pipe-delimited syntax**:
+
+```freemarker
+<#--
+${VARIABLE_NAME|value|description}
+-->
+```
+
+### 🔧 **Core Attributes**
+
+| Variable               | Description                                                                                                               |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `PRV_SYS_GEN_PATH`     | Relative path pattern for the generated file. Can contain placeholders like `[class]`, `[table]`, `[instance]`, `[base]`. |
+| `PRV_SYS_GEN_TYPE`     | Generation type: `one`, `many`, or `copy`. Default is `copy`. Use `many` for generating multiple files.                   |
+| `PRV_SYS_GEN_FILENAME` | Target file name to generate (e.g., `MyClass.java`). Supports placeholders. Removes `.ftl` extension automatically.       |
+| `PRV_SYS_IS_REPLACE`   | `true` to overwrite existing files, `false` to create a unique file name. Default is `false`.                             |
+| `PRV_SYS_JAVA_PACKAGE` | Defines Java package and auto-creates directory structure based on placeholders.                                          |
+
+---
+
+### 📦 **Placeholders in Paths and Filenames**
+
+* `[class]` → Class name
+* `[table]` → Table name
+* `[instance]` → Instance name
+* `[base]` → Base name
+
+These placeholders are dynamically replaced during rendering.
+
+---
+
+### 📁 **Generation Logic for `many` Type**
+
+* Applies only to **files**, not folders.
+* Folders are always copied directly.
+* `.ftl` extension is stripped from filenames.
+* If no values are set for system attributes, defaults are applied.
+
+---
+
+### 🛠 **Final Generated Path Pattern**
+
+```text
+[Root Directory Deployment] + [PRV_SYS_GEN_PATH] + [PRV_SYS_JAVA_PACKAGE] + [PRV_SYS_GEN_FILENAME]
+```
+
+Ensure the values of `PRV_SYS_GEN_PATH` and `PRV_SYS_JAVA_PACKAGE` are compatible and don't result in conflicting or redundant folder structures.
+
+---
+
+This summary is now ready to be used as a **prompt primer** or documentation snippet to guide AI or dev tools when working with FreeMarker-based file generation templates. Let me know if you want the same structure for `one` or `copy` types.

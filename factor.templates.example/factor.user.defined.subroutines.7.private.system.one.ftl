@@ -35,3 +35,65 @@ A. One Generation Type Logic Rule
       - A private system placeholder to determine whether the file should be replaced (true or false). If set to false, an additional suffix will be added to the file name.
       - If not provided, it will default to 'false.'
 5. All Factor FreeMarker Directives, Predefined Subroutines, User-Defined Subroutines, Public and Private System Attributes, Public Attributes, and Private (File) Attributes will be replaced by their values, rendered, and changed.
+
+====================================================================================================================================
+B. AI Prompt One Generation Type Logic Rule
+====================================================================================================================================
+
+Here is a concise and clear **summary of the FreeMarker data model** you described, tailored for AI understanding and reuse:
+
+---
+
+### ✅ **FreeMarker Private System Data Model Summary**
+
+This data model controls how files are generated based on metadata embedded in template comments using this syntax:
+
+```
+<#-- ${VAR_NAME|value|description} -->
+```
+
+Each variable has:
+
+* **Name**: used in the template as `${VAR_NAME}`
+* **Value**: used in rendering
+* **Description**: human-readable purpose
+
+---
+
+### 📦 **Main Variables (Private System Attributes)**
+
+| Variable               | Purpose                                                                             | Default (if not set) |
+| ---------------------- | ----------------------------------------------------------------------------------- | -------------------- |
+| `PRV_SYS_GEN_TYPE`     | Defines how the file should be generated: `one`, `many`, or `copy`.                 | `copy`               |
+| `PRV_SYS_GEN_PATH`     | Relative path from the root deployment directory where the file will be placed.     | root directory       |
+| `PRV_SYS_GEN_FILENAME` | Custom file name for output (removes `.ftl` extension if present).                  | uses template name   |
+| `PRV_SYS_IS_REPLACE`   | Whether to overwrite existing file (`true`) or add suffix for uniqueness (`false`). | `false`              |
+
+---
+
+### 📘 **"One" Generation Type Rules**
+
+1. Applies to files only — folders are always copied.
+2. `.ftl` file extension is stripped from output file name.
+3. Each variable behaves as described above and will be substituted during template rendering.
+4. All FreeMarker directives, macros, and attribute placeholders are evaluated before output.
+
+---
+
+### 🧩 **Variable Declaration Format Pattern**
+
+Variables are defined in template comments using this pattern:
+
+```freemarker
+<#-- ${VAR_NAME|value|description} -->
+```
+
+Example:
+
+```freemarker
+<#-- ${PRV_SYS_GEN_TYPE|one|Generation type: one, many, copy} -->
+```
+
+---
+
+You can now use this summary to easily instruct an AI or developer on how this FreeMarker data model works and how to interpret or populate `.ftl` templates accordingly.

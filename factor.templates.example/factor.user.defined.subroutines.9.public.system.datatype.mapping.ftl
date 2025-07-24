@@ -105,3 +105,82 @@ ${PUB_SYS_DTM@jsonb|String|JSON}
                 </#list> 
 
 </#list>    
+
+====================================================================================================================================
+C. AI Prompt Public System Data Type Mapping  - POSTGRES VS JAVA
+====================================================================================================================================
+
+Here’s a clear and concise **summary of your FreeMarker data model logic** that you can use to prompt AI tools for accurate and contextual assistance:
+
+---
+
+### ✅ **FreeMarker Data Model Summary (Public System Data Type Mapping)**
+
+This logic defines how to map database types to programming language types (e.g., Java) within a FreeMarker template engine, using a customizable and override-friendly system:
+
+---
+
+#### 🔹 **Core Mapping Rule**
+
+* A default mapping exists between **DB data types** and **Java data types**.
+* This can be:
+
+  * **Customized** in the field editor.
+  * **Overridden** via a logic block called `Public System Data Type Mapping`.
+
+---
+
+#### 🔹 **Mapping Syntax**
+
+```freemarker
+${PUB_SYS_DTM@<DB_DT_TYPE>|<PL_DT_TYPE>|<Description>}
+```
+
+* `DB_DT_TYPE` = source DB type (e.g., `integer`, `text`)
+* `PL_DT_TYPE` = target programming type (e.g., `Integer`, `String`)
+* `PUB_SYS_DTM` = special marker for the public mapping rule.
+
+---
+
+#### 🔹 **Condition for Application**
+
+* Applied only when: `PRV_SYS_GEN_TYPE` is set to `'one'` or `'many'`.
+
+---
+
+#### 🔹 **Postgres → Java Mapping Examples**
+
+| **Postgres Type**  | **Java Type(s)**             | **Category**   |
+| ------------------ | ---------------------------- | -------------- |
+| `integer`          | `int`, `Integer`             | Numeric        |
+| `bigint`           | `long`, `Long`               | Numeric        |
+| `decimal`          | `BigDecimal`                 | Numeric        |
+| `text` / `varchar` | `String`                     | Character/Text |
+| `date`             | `java.sql.Date`, `LocalDate` | Date/Time      |
+| `timestamp`        | `LocalDateTime`, `Timestamp` | Date/Time      |
+| `boolean`          | `boolean`, `Boolean`         | Boolean        |
+| `uuid`             | `java.util.UUID`             | UUID           |
+| `json`, `jsonb`    | `String`                     | JSON           |
+| `bytea`            | `byte[]`                     | Binary         |
+| `enum`             | `String`                     | Enum           |
+
+*(Full mapping list available if needed.)*
+
+---
+
+#### 🔹 **Usage in Template**
+
+Iterating over entity fields and accessing their mapped types:
+
+```freemarker
+<#list adv.entities as i>
+  ${i.tableName}
+  <#list i.fieldList as k>
+    ${k.fieldType} - ${k.fieldName} - ${k.columnType} - ${k.columnName}
+  </#list>
+</#list>
+```
+
+---
+
+Let me know if you'd like to auto-generate Java classes or validate mappings directly from this model — I can help generate the code or logic.

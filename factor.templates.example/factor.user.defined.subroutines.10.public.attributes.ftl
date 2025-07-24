@@ -47,3 +47,56 @@ PUB_DB_USER	: ${PUB_DB_USER}
 PUB_DB_NAME	: ${PUB_DB_NAME}
 PUB_DB_PASS	: ${PUB_DB_PASS}
 PUB_APP_PKG	: ${PUB_APP_PKG}    
+
+====================================================================================================================================
+C. AI Prompt Public Attributes
+====================================================================================================================================
+
+Here is a concise **summary** of your FreeMarker **data model logic** and usage rules, optimized for AI understanding and prompting:
+
+---
+
+### ✅ **FreeMarker Data Model Summary (for AI)**
+
+#### 🔒 **Private Attributes**
+
+Used internally by the system to control file generation behavior:
+
+* `${PRV_SYS_GEN_PATH}`: Relative output path
+* `${PRV_SYS_GEN_TYPE}`: Generation type (`one`, `many`, `copy`)
+* `${PRV_SYS_GEN_FILENAME}`: Custom filename (optional override)
+* `${PRV_SYS_IS_REPLACE}`: Replace existing file (`true`/`false`)
+
+#### 🌐 **Public Attributes**
+
+Used as dynamic inputs across templates. Can be customized per project or environment:
+
+* `${PUB_DB_TYPE}`: Database type (e.g., `postgresql`, `oracle`)
+* `${PUB_APP_IP}`: App server IP
+* `${PUB_DB_IP}`: Database IP
+* `${PUB_DB_PORT}`: Port number based on DB type
+* `${PUB_DB_USER}`: Database user
+* `${PUB_DB_NAME}`: Database name
+* `${PUB_DB_PASS}`: Database password
+* `${PUB_APP_PKG}`: Application package or module name
+
+#### 📐 **Public Attribute Rules**
+
+1. **Pattern**: Use format `${PUB_XXXXX|VALUE|Description}`
+
+   * Customize `XXXXX` freely; keep `PUB_` prefix.
+   * `VALUE` is the default value; `Description` is optional documentation.
+
+2. **Multiple Template Support**:
+
+   * Same public attribute can appear in multiple templates.
+   * Final value is taken from the most recently updated template.
+
+3. **Override Behavior**:
+
+   * Public attribute values can be centrally updated in a master attribute table.
+   * These overrides take precedence over individual template values.
+
+---
+
+Let me know if you want this turned into a FreeMarker helper doc or converted to Markdown or JSON for automation.

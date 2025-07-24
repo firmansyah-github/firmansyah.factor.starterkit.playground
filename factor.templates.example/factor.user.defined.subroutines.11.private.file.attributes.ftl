@@ -37,7 +37,7 @@ A. Private (File) Attributes Logic Rule
    b. These modified values take precedence over those in the individual files.
    
 ====================================================================================================================================
-B. Public Attributes
+B. Private Attributes
 ====================================================================================================================================
 PRV_DB_TYPE	: ${PRV_DB_TYPE}
 PRV_APP_IP	: ${PRV_APP_IP}
@@ -47,3 +47,37 @@ PRV_DB_USER	: ${PRV_DB_USER}
 PRV_DB_NAME	: ${PRV_DB_NAME}
 PRV_DB_PASS	: ${PRV_DB_PASS}
 PRV_APP_PKG	: ${PRV_APP_PKG}    
+
+
+====================================================================================================================================
+C. AI Prompt Public Attributes
+====================================================================================================================================
+Here’s a concise summary of your FreeMarker data model description, ready to prompt an AI for easy understanding and use:
+
+---
+
+### FreeMarker Data Model Summary
+
+* **Private (File) Attributes**
+
+  * Use a naming pattern starting with `PRV_` prefix, e.g., `${PRV_XXXXX|VALUE|Description}`.
+  * `XXXXX` is customizable; `VALUE` is the attribute’s value; `Description` is optional documentation.
+  * These private attributes can appear in multiple template files, each file can have its own values.
+  * Attribute values can be overridden centrally in a "Private (File) Attributes" table, which takes precedence over file-defined values.
+  * Common private attributes include file-generation settings like path, filename, generation type, replace flag, etc.
+
+* **Private Attributes**
+
+  * Represent commonly used environment or system settings exposed to templates, e.g.:
+
+    * `PRV_DB_TYPE` (e.g., postgresql, oracle)
+    * `PRV_APP_IP`, `PRV_DB_IP` (host IP addresses)
+    * `PRV_DB_PORT`, `PRV_DB_USER`, `PRV_DB_NAME`, `PRV_DB_PASS` (database connection info)
+    * `PRV_APP_PKG` (application package name)
+  * These are accessed in the template like `${PRV_DB_TYPE}` and provide context or configuration data.
+
+---
+
+This summary clarifies the role of private vs public attributes, naming conventions, scope, and usage patterns in the FreeMarker data model.
+
+Let me know if you want it shorter or more technical!

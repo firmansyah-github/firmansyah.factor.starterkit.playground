@@ -1,766 +1,230 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns2:advCrudGenDomain buildDate="2023-10-16+07:00" xmlns:ns2="http://firmansyah.net/firmansyah-mapping">
+<ns2:advCrudGenDomain buildDate="2025-04-12+04:00" xmlns:ns2="http://firmansyah.net/firmansyah-mapping">
     <generation>
         <outputDir>outputDir</outputDir>
         <packageName>packageName</packageName>
-        <rootDir>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</rootDir>
+        <rootDir>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output/test</rootDir>
         <specifyTemplateDir>true</specifyTemplateDir>
         <superClassName>superClassName</superClassName>
-        <templateDir>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example</templateDir>
+        <templateDir>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example</templateDir>
     </generation>
     <database>
-        <profileName>New PostgreSQL Quarkus</profileName>
-        <catalog>postgres</catalog>
-        <name>New PostgreSQL Quarkus</name>
-        <schema>public</schema>
+        <profileName>New SQL Server</profileName>
+        <catalog>S360_PAYMENT</catalog>
+        <name>New SQL Server</name>
+        <schema>dbo</schema>
         <tablePattern>%</tablePattern>
         <tableType>TABLE</tableType>
     </database>
     <entities>
-        <tableName>articles</tableName>
-        <baseName>articles</baseName>
+        <tableName>BeneficiaryInfo</tableName>
+        <baseName>beneficiaryinfo</baseName>
         <allFieldSelection>true</allFieldSelection>
         <create>true</create>
         <selected>false</selected>
-        <fieldList create="true" lob="false" nullable="false" pkPosition="1" fieldType="String" fieldName="id" columnSize="255" columnType="varchar" columnName="id" autoincrement="false" ordinalPosition="1" columnDataType="12" unique="true"/>
-        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="String" fieldName="body" columnSize="255" columnType="varchar" columnName="body" autoincrement="false" ordinalPosition="2" columnDataType="12" unique="false"/>
-        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="String" fieldName="description" columnSize="255" columnType="varchar" columnName="description" autoincrement="false" ordinalPosition="3" columnDataType="12" unique="false"/>
-        <exportedKeys pkTableName="articles" pkBaseName="articles" pkColumnName="id" fkTableName="favorite_relationship" fkBaseName="favoriteRelationship" fkColumnName="article_id" fkSequence="1" updateRule="3" deleteRule="3" fkName="fkowosoel7w8ribsbbat1ph4u7s" pkName="articles_pkey" create="true" exported="true"/>
-        <exportedKeys pkTableName="articles" pkBaseName="articles" pkColumnName="id" fkTableName="comments" fkBaseName="comments" fkColumnName="article_id" fkSequence="1" updateRule="3" deleteRule="3" fkName="fkf64h7ce877ohr18431t5oqcit" pkName="articles_pkey" create="true" exported="true"/>
-        <exportedKeys pkTableName="articles" pkBaseName="articles" pkColumnName="id" fkTableName="tag_relationship" fkBaseName="tagRelationship" fkColumnName="article_id" fkSequence="1" updateRule="3" deleteRule="3" fkName="fkqmgfrtorm00goskaw7w08x8o3" pkName="articles_pkey" create="true" exported="true"/>
-        <importedKeys pkTableName="users" pkBaseName="users" pkColumnName="id" fkTableName="articles" fkBaseName="articles" fkColumnName="author_id" fkSequence="1" updateRule="3" deleteRule="3" fkName="fkjnt23nr1d7wt0sjl2dof5mip5" pkName="users_pkey" create="true" exported="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="0" fieldType="java.lang.String" fieldName="mobileno" columnSize="25" columnType="nvarchar" columnName="mobileNo" autoincrement="false" ordinalPosition="6" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="fullnamear" columnSize="100" columnType="nvarchar" columnName="fullNameAr" autoincrement="false" ordinalPosition="5" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="emiratesid" columnSize="36" columnType="nvarchar" columnName="emiratesId" autoincrement="false" ordinalPosition="8" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="0" fieldType="java.lang.String" fieldName="type" columnSize="15" columnType="nvarchar" columnName="type" autoincrement="false" ordinalPosition="9" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="email" columnSize="254" columnType="nvarchar" columnName="email" autoincrement="false" ordinalPosition="7" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="accountid" columnSize="25" columnType="nvarchar" columnName="accountId" autoincrement="false" ordinalPosition="3" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="0" fieldType="java.lang.String" fieldName="fullnameen" columnSize="100" columnType="nvarchar" columnName="fullNameEn" autoincrement="false" ordinalPosition="4" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="String" fieldName="serviceid" columnSize="36" columnType="char" columnName="serviceId" autoincrement="false" ordinalPosition="2" columnDataType="1" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="1" fieldType="String" fieldName="beneficiaryinfoid" columnSize="36" columnType="char" columnName="beneficiaryInfoId" autoincrement="false" ordinalPosition="1" columnDataType="1" unique="true"/>
+        <exportedKeys pkTableName="BeneficiaryInfo" pkBaseName="beneficiaryinfo" pkColumnName="beneficiaryInfoId" fkTableName="PaymentApplicationQuote" fkBaseName="paymentapplicationquote" fkColumnName="beneficiaryInfoId" fkSequence="1" updateRule="3" deleteRule="3" fkName="FK_Quote_Beneficiary" pkName="PK__Benefici__2B51FE4D772C0DE5" create="true" exported="true"/>
+        <exportedKeys pkTableName="BeneficiaryInfo" pkBaseName="beneficiaryinfo" pkColumnName="beneficiaryInfoId" fkTableName="PaymentApplicationQuoteFeeDetail" fkBaseName="paymentapplicationquotefeedetail" fkColumnName="beneficiaryInfoId" fkSequence="1" updateRule="3" deleteRule="3" fkName="FK_QuoteFeeDetail_Beneficiary" pkName="PK__Benefici__2B51FE4D772C0DE5" create="true" exported="true"/>
+        <exportedKeys pkTableName="BeneficiaryInfo" pkBaseName="beneficiaryinfo" pkColumnName="beneficiaryInfoId" fkTableName="CompanyInfo" fkBaseName="companyinfo" fkColumnName="beneficiaryInfoId" fkSequence="1" updateRule="3" deleteRule="3" fkName="FK_CompanyInfo_Beneficiary" pkName="PK__Benefici__2B51FE4D772C0DE5" create="true" exported="true"/>
+        <exportedKeys pkTableName="BeneficiaryInfo" pkBaseName="beneficiaryinfo" pkColumnName="beneficiaryInfoId" fkTableName="BeneficiaryInfoProp" fkBaseName="beneficiaryinfoprop" fkColumnName="beneficiaryInfoId" fkSequence="1" updateRule="3" deleteRule="3" fkName="FK_BeneficiaryInfoProp_Beneficiary" pkName="PK__Benefici__2B51FE4D772C0DE5" create="true" exported="true"/>
+        <importedKeys pkTableName="Service" pkBaseName="service" pkColumnName="serviceId" fkTableName="BeneficiaryInfo" fkBaseName="beneficiaryinfo" fkColumnName="serviceId" fkSequence="1" updateRule="3" deleteRule="3" fkName="FK_BeneficiaryInfo_Service" pkName="PK__Service__455070DF4590401E" create="true" exported="false"/>
     </entities>
     <entities>
-        <tableName>comments</tableName>
-        <baseName>comments</baseName>
+        <tableName>CompanyInfo</tableName>
+        <baseName>companyinfo</baseName>
         <allFieldSelection>true</allFieldSelection>
         <create>true</create>
         <selected>false</selected>
-        <fieldList create="true" lob="false" nullable="false" pkPosition="1" fieldType="String" fieldName="id" columnSize="255" columnType="varchar" columnName="id" autoincrement="false" ordinalPosition="1" columnDataType="12" unique="true"/>
-        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="String" fieldName="body" columnSize="255" columnType="varchar" columnName="body" autoincrement="false" ordinalPosition="2" columnDataType="12" unique="false"/>
-        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.time.LocalDateTime" fieldName="createdat" columnSize="29" columnType="timestamp" columnName="createdat" autoincrement="false" ordinalPosition="3" columnDataType="93" unique="false"/>
-        <importedKeys pkTableName="users" pkBaseName="users" pkColumnName="id" fkTableName="comments" fkBaseName="comments" fkColumnName="author_id" fkSequence="1" updateRule="3" deleteRule="3" fkName="fkbr9p7rllqhrjo97rucg45lhfx" pkName="users_pkey" create="true" exported="false"/>
-        <importedKeys pkTableName="articles" pkBaseName="articles" pkColumnName="id" fkTableName="comments" fkBaseName="comments" fkColumnName="article_id" fkSequence="1" updateRule="3" deleteRule="3" fkName="fkf64h7ce877ohr18431t5oqcit" pkName="articles_pkey" create="true" exported="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="companynamear" columnSize="200" columnType="nvarchar" columnName="companyNameAr" autoincrement="false" ordinalPosition="3" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="licenseissuingauthority" columnSize="100" columnType="nvarchar" columnName="licenseIssuingAuthority" autoincrement="false" ordinalPosition="5" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="tradelicensenumber" columnSize="100" columnType="nvarchar" columnName="tradeLicenseNumber" autoincrement="false" ordinalPosition="4" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="0" fieldType="java.lang.String" fieldName="companynameen" columnSize="200" columnType="nvarchar" columnName="companyNameEn" autoincrement="false" ordinalPosition="2" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="1" fieldType="String" fieldName="beneficiaryinfoid" columnSize="36" columnType="char" columnName="beneficiaryInfoId" autoincrement="false" ordinalPosition="1" columnDataType="1" unique="true"/>
+        <importedKeys pkTableName="BeneficiaryInfo" pkBaseName="beneficiaryinfo" pkColumnName="beneficiaryInfoId" fkTableName="CompanyInfo" fkBaseName="companyinfo" fkColumnName="beneficiaryInfoId" fkSequence="1" updateRule="3" deleteRule="3" fkName="FK_CompanyInfo_Beneficiary" pkName="PK__Benefici__2B51FE4D772C0DE5" create="true" exported="false"/>
     </entities>
     <entities>
-        <tableName>favorite_relationship</tableName>
-        <baseName>favoriteRelationship</baseName>
+        <tableName>Payment</tableName>
+        <baseName>payment</baseName>
         <allFieldSelection>true</allFieldSelection>
         <create>true</create>
         <selected>false</selected>
-        <fieldList create="true" lob="false" nullable="false" pkPosition="2" fieldType="String" fieldName="userId" columnSize="255" columnType="varchar" columnName="user_id" autoincrement="false" ordinalPosition="1" columnDataType="12" unique="true"/>
-        <fieldList create="true" lob="false" nullable="false" pkPosition="1" fieldType="String" fieldName="articleId" columnSize="255" columnType="varchar" columnName="article_id" autoincrement="false" ordinalPosition="2" columnDataType="12" unique="true"/>
-        <importedKeys pkTableName="users" pkBaseName="users" pkColumnName="id" fkTableName="favorite_relationship" fkBaseName="favoriteRelationship" fkColumnName="user_id" fkSequence="1" updateRule="3" deleteRule="3" fkName="fkvcypov2wfc5kmf5ooyot03nw" pkName="users_pkey" create="true" exported="false"/>
-        <importedKeys pkTableName="articles" pkBaseName="articles" pkColumnName="id" fkTableName="favorite_relationship" fkBaseName="favoriteRelationship" fkColumnName="article_id" fkSequence="1" updateRule="3" deleteRule="3" fkName="fkowosoel7w8ribsbbat1ph4u7s" pkName="articles_pkey" create="true" exported="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="lastexternalrefid" columnSize="36" columnType="nvarchar" columnName="lastExternalRefId" autoincrement="false" ordinalPosition="6" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="status" columnSize="20" columnType="nvarchar" columnName="status" autoincrement="false" ordinalPosition="5" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="0" fieldType="int" fieldName="totaltransactions" columnSize="10" columnType="int" columnName="totalTransactions" autoincrement="false" ordinalPosition="8" columnDataType="4" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="0" fieldType="BigDecimal" fieldName="totalamount" columnSize="18" columnType="decimal" columnName="totalAmount" autoincrement="false" ordinalPosition="7" columnDataType="3" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="userid" columnSize="36" columnType="nvarchar" columnName="userId" autoincrement="false" ordinalPosition="3" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.sql.Timestamp" fieldName="paymentdatetime" columnSize="23" columnType="datetime" columnName="paymentDateTime" autoincrement="false" ordinalPosition="4" columnDataType="93" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="1" fieldType="String" fieldName="paymentbatchid" columnSize="36" columnType="char" columnName="paymentBatchId" autoincrement="false" ordinalPosition="1" columnDataType="1" unique="true"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="String" fieldName="paymentgatewayid" columnSize="36" columnType="char" columnName="paymentGatewayId" autoincrement="false" ordinalPosition="2" columnDataType="1" unique="false"/>
+        <exportedKeys pkTableName="Payment" pkBaseName="payment" pkColumnName="paymentBatchId" fkTableName="PaymentApplicationTransaction" fkBaseName="paymentapplicationtransaction" fkColumnName="paymentBatchId" fkSequence="1" updateRule="3" deleteRule="0" fkName="FK_Transaction_Payment" pkName="PK__Payment__5F284A1D858095EB" create="true" exported="true"/>
+        <importedKeys pkTableName="PaymentUser" pkBaseName="paymentuser" pkColumnName="userId" fkTableName="Payment" fkBaseName="payment" fkColumnName="userId" fkSequence="1" updateRule="3" deleteRule="3" fkName="FK_Payment_User" pkName="PK__PaymentU__CB9A1CFF18C756F9" create="true" exported="false"/>
+        <importedKeys pkTableName="PaymentGateway" pkBaseName="paymentgateway" pkColumnName="paymentGatewayId" fkTableName="Payment" fkBaseName="payment" fkColumnName="paymentGatewayId" fkSequence="1" updateRule="3" deleteRule="3" fkName="FK_Payment_Gateway" pkName="PK__PaymentG__2174AB31CBC54BFF" create="true" exported="false"/>
+    </entities>
+    <entities>
+        <tableName>PaymentApplicationQuote</tableName>
+        <baseName>paymentapplicationquote</baseName>
+        <allFieldSelection>true</allFieldSelection>
+        <create>true</create>
+        <selected>false</selected>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="int" fieldName="totalitem" columnSize="10" columnType="int" columnName="totalItem" autoincrement="false" ordinalPosition="10" columnDataType="4" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="currency" columnSize="10" columnType="nvarchar" columnName="currency" autoincrement="false" ordinalPosition="11" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="BigDecimal" fieldName="totalamount" columnSize="18" columnType="decimal" columnName="totalAmount" autoincrement="false" ordinalPosition="9" columnDataType="3" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="typeofpay" columnSize="20" columnType="nvarchar" columnName="typeOfPay" autoincrement="false" ordinalPosition="8" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.sql.Timestamp" fieldName="expireddatetime" columnSize="23" columnType="datetime" columnName="expiredDateTime" autoincrement="false" ordinalPosition="14" columnDataType="93" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="status" columnSize="36" columnType="nvarchar" columnName="status" autoincrement="false" ordinalPosition="15" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="userid" columnSize="36" columnType="nvarchar" columnName="userId" autoincrement="false" ordinalPosition="5" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="String" fieldName="beneficiaryinfoid" columnSize="36" columnType="char" columnName="beneficiaryInfoId" autoincrement="false" ordinalPosition="4" columnDataType="1" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="String" fieldName="serviceid" columnSize="36" columnType="char" columnName="serviceId" autoincrement="false" ordinalPosition="7" columnDataType="1" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="pricedby" columnSize="36" columnType="nvarchar" columnName="pricedBy" autoincrement="false" ordinalPosition="6" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.sql.Timestamp" fieldName="quotedatetime" columnSize="23" columnType="datetime" columnName="quoteDateTime" autoincrement="false" ordinalPosition="13" columnDataType="93" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.sql.Timestamp" fieldName="requestquotedatetime" columnSize="23" columnType="datetime" columnName="RequestQuoteDateTime" autoincrement="false" ordinalPosition="12" columnDataType="93" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="2" fieldType="String" fieldName="applicationid" columnSize="36" columnType="char" columnName="applicationId" autoincrement="false" ordinalPosition="2" columnDataType="1" unique="true"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="1" fieldType="String" fieldName="paymentapplicationquoteid" columnSize="36" columnType="char" columnName="paymentApplicationQuoteId" autoincrement="false" ordinalPosition="1" columnDataType="1" unique="true"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="dulnumber" columnSize="50" columnType="nvarchar" columnName="dulNumber" autoincrement="false" ordinalPosition="3" columnDataType="-9" unique="false"/>
+        <exportedKeys pkTableName="PaymentApplicationQuote" pkBaseName="paymentapplicationquote" pkColumnName="applicationId" fkTableName="PaymentStep" fkBaseName="paymentstep" fkColumnName="applicationId" fkSequence="2" updateRule="3" deleteRule="0" fkName="FK_Step_Payment" pkName="PK__PaymentA__5574300B4FCC324E" create="true" exported="true"/>
+        <exportedKeys pkTableName="PaymentApplicationQuote" pkBaseName="paymentapplicationquote" pkColumnName="applicationId" fkTableName="PaymentApplicationQuoteFeeDetail" fkBaseName="paymentapplicationquotefeedetail" fkColumnName="applicationId" fkSequence="2" updateRule="3" deleteRule="0" fkName="FK_QuoteFeeDetail_Quote" pkName="PK__PaymentA__5574300B4FCC324E" create="true" exported="true"/>
+        <exportedKeys pkTableName="PaymentApplicationQuote" pkBaseName="paymentapplicationquote" pkColumnName="applicationId" fkTableName="PaymentApplicationTransaction" fkBaseName="paymentapplicationtransaction" fkColumnName="applicationId" fkSequence="2" updateRule="3" deleteRule="0" fkName="FK_Transaction_Quote" pkName="PK__PaymentA__5574300B4FCC324E" create="true" exported="true"/>
+        <exportedKeys pkTableName="PaymentApplicationQuote" pkBaseName="paymentapplicationquote" pkColumnName="paymentApplicationQuoteId" fkTableName="PaymentApplicationTransaction" fkBaseName="paymentapplicationtransaction" fkColumnName="paymentApplicationQuoteId" fkSequence="1" updateRule="3" deleteRule="0" fkName="FK_Transaction_Quote" pkName="PK__PaymentA__5574300B4FCC324E" create="true" exported="true"/>
+        <exportedKeys pkTableName="PaymentApplicationQuote" pkBaseName="paymentapplicationquote" pkColumnName="paymentApplicationQuoteId" fkTableName="PaymentStep" fkBaseName="paymentstep" fkColumnName="paymentApplicationQuoteId" fkSequence="1" updateRule="3" deleteRule="0" fkName="FK_Step_Payment" pkName="PK__PaymentA__5574300B4FCC324E" create="true" exported="true"/>
+        <exportedKeys pkTableName="PaymentApplicationQuote" pkBaseName="paymentapplicationquote" pkColumnName="paymentApplicationQuoteId" fkTableName="PaymentApplicationQuoteFeeDetail" fkBaseName="paymentapplicationquotefeedetail" fkColumnName="paymentApplicationQuoteId" fkSequence="1" updateRule="3" deleteRule="0" fkName="FK_QuoteFeeDetail_Quote" pkName="PK__PaymentA__5574300B4FCC324E" create="true" exported="true"/>
+        <importedKeys pkTableName="PaymentUser" pkBaseName="paymentuser" pkColumnName="userId" fkTableName="PaymentApplicationQuote" fkBaseName="paymentapplicationquote" fkColumnName="userId" fkSequence="1" updateRule="3" deleteRule="3" fkName="FK_Quote_User" pkName="PK__PaymentU__CB9A1CFF18C756F9" create="true" exported="false"/>
+        <importedKeys pkTableName="Service" pkBaseName="service" pkColumnName="serviceId" fkTableName="PaymentApplicationQuote" fkBaseName="paymentapplicationquote" fkColumnName="serviceId" fkSequence="1" updateRule="3" deleteRule="3" fkName="FK_Quote_Service" pkName="PK__Service__455070DF4590401E" create="true" exported="false"/>
+        <importedKeys pkTableName="BeneficiaryInfo" pkBaseName="beneficiaryinfo" pkColumnName="beneficiaryInfoId" fkTableName="PaymentApplicationQuote" fkBaseName="paymentapplicationquote" fkColumnName="beneficiaryInfoId" fkSequence="1" updateRule="3" deleteRule="3" fkName="FK_Quote_Beneficiary" pkName="PK__Benefici__2B51FE4D772C0DE5" create="true" exported="false"/>
+    </entities>
+    <entities>
+        <tableName>PaymentApplicationQuoteFeeDetail</tableName>
+        <baseName>paymentapplicationquotefeedetail</baseName>
+        <allFieldSelection>true</allFieldSelection>
+        <create>true</create>
+        <selected>false</selected>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="BigDecimal" fieldName="amount" columnSize="18" columnType="decimal" columnName="amount" autoincrement="false" ordinalPosition="6" columnDataType="3" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="String" fieldName="beneficiaryinfoid" columnSize="36" columnType="char" columnName="beneficiaryInfoId" autoincrement="false" ordinalPosition="5" columnDataType="1" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="String" fieldName="applicationid" columnSize="36" columnType="char" columnName="applicationId" autoincrement="false" ordinalPosition="3" columnDataType="1" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="feetype" columnSize="20" columnType="nvarchar" columnName="feeType" autoincrement="false" ordinalPosition="4" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="String" fieldName="paymentapplicationquoteid" columnSize="36" columnType="char" columnName="paymentApplicationQuoteId" autoincrement="false" ordinalPosition="2" columnDataType="1" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="1" fieldType="String" fieldName="paymentapplicationquotefeedetailid" columnSize="36" columnType="char" columnName="paymentApplicationQuoteFeeDetailId" autoincrement="false" ordinalPosition="1" columnDataType="1" unique="true"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="description" columnSize="255" columnType="nvarchar" columnName="description" autoincrement="false" ordinalPosition="7" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="feetypeAr" columnSize="20" columnType="nvarchar" columnName="feeType_ar" autoincrement="false" ordinalPosition="8" columnDataType="-9" unique="false"/>
+        <importedKeys pkTableName="PaymentApplicationQuote" pkBaseName="paymentapplicationquote" pkColumnName="paymentApplicationQuoteId" fkTableName="PaymentApplicationQuoteFeeDetail" fkBaseName="paymentapplicationquotefeedetail" fkColumnName="paymentApplicationQuoteId" fkSequence="1" updateRule="3" deleteRule="0" fkName="FK_QuoteFeeDetail_Quote" pkName="PK__PaymentA__5574300B4FCC324E" create="true" exported="false"/>
+        <importedKeys pkTableName="BeneficiaryInfo" pkBaseName="beneficiaryinfo" pkColumnName="beneficiaryInfoId" fkTableName="PaymentApplicationQuoteFeeDetail" fkBaseName="paymentapplicationquotefeedetail" fkColumnName="beneficiaryInfoId" fkSequence="1" updateRule="3" deleteRule="3" fkName="FK_QuoteFeeDetail_Beneficiary" pkName="PK__Benefici__2B51FE4D772C0DE5" create="true" exported="false"/>
+        <importedKeys pkTableName="PaymentApplicationQuote" pkBaseName="paymentapplicationquote" pkColumnName="applicationId" fkTableName="PaymentApplicationQuoteFeeDetail" fkBaseName="paymentapplicationquotefeedetail" fkColumnName="applicationId" fkSequence="2" updateRule="3" deleteRule="0" fkName="FK_QuoteFeeDetail_Quote" pkName="PK__PaymentA__5574300B4FCC324E" create="true" exported="false"/>
+    </entities>
+    <entities>
+        <tableName>PaymentApplicationTransaction</tableName>
+        <baseName>paymentapplicationtransaction</baseName>
+        <allFieldSelection>true</allFieldSelection>
+        <create>true</create>
+        <selected>false</selected>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="0" fieldType="java.lang.String" fieldName="type" columnSize="10" columnType="nvarchar" columnName="type" autoincrement="false" ordinalPosition="13" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="0" fieldType="java.lang.String" fieldName="settlementtype" columnSize="10" columnType="nvarchar" columnName="settlementType" autoincrement="false" ordinalPosition="15" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="0" fieldType="java.lang.String" fieldName="version" columnSize="5" columnType="nvarchar" columnName="version" autoincrement="false" ordinalPosition="14" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="0" fieldType="java.lang.String" fieldName="description" columnSize="1000" columnType="nvarchar" columnName="description" autoincrement="false" ordinalPosition="12" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="0" fieldType="String" fieldName="channel" columnSize="3" columnType="char" columnName="channel" autoincrement="false" ordinalPosition="11" columnDataType="1" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="0" fieldType="java.lang.String" fieldName="sptrn" columnSize="25" columnType="nvarchar" columnName="spTrn" autoincrement="false" ordinalPosition="7" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="0" fieldType="java.lang.String" fieldName="servcode" columnSize="10" columnType="nvarchar" columnName="servCode" autoincrement="false" ordinalPosition="6" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="String" fieldName="paymentapplicationquoteid" columnSize="36" columnType="char" columnName="paymentApplicationQuoteId" autoincrement="false" ordinalPosition="3" columnDataType="1" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="0" fieldType="java.lang.String" fieldName="spcode" columnSize="10" columnType="nvarchar" columnName="spCode" autoincrement="false" ordinalPosition="5" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="String" fieldName="applicationid" columnSize="36" columnType="char" columnName="applicationId" autoincrement="false" ordinalPosition="4" columnDataType="1" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="String" fieldName="paymentbatchid" columnSize="36" columnType="char" columnName="paymentBatchId" autoincrement="false" ordinalPosition="2" columnDataType="1" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="1" fieldType="String" fieldName="paymentapplicationtransactionid" columnSize="36" columnType="char" columnName="paymentApplicationTransactionId" autoincrement="false" ordinalPosition="1" columnDataType="1" unique="true"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="0" fieldType="BigDecimal" fieldName="amount" columnSize="18" columnType="decimal" columnName="amount" autoincrement="false" ordinalPosition="8" columnDataType="3" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="paymentmethod" columnSize="30" columnType="nvarchar" columnName="paymentMethod" autoincrement="false" ordinalPosition="18" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="txntimestamp" columnSize="19" columnType="nvarchar" columnName="txnTimestamp" autoincrement="false" ordinalPosition="17" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="degtrn" columnSize="10" columnType="nvarchar" columnName="degTrn" autoincrement="false" ordinalPosition="16" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="status" columnSize="20" columnType="nvarchar" columnName="status" autoincrement="false" ordinalPosition="20" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="paymentmethodnumber" columnSize="50" columnType="nvarchar" columnName="paymentMethodNumber" autoincrement="false" ordinalPosition="19" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="0" fieldType="java.lang.String" fieldName="currency" columnSize="10" columnType="nvarchar" columnName="currency" autoincrement="false" ordinalPosition="9" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="0" fieldType="java.lang.String" fieldName="timestamp" columnSize="19" columnType="nvarchar" columnName="timestamp" autoincrement="false" ordinalPosition="10" columnDataType="-9" unique="false"/>
+        <exportedKeys pkTableName="PaymentApplicationTransaction" pkBaseName="paymentapplicationtransaction" pkColumnName="paymentApplicationTransactionId" fkTableName="PaymentApplicationTransactionProp" fkBaseName="paymentapplicationtransactionprop" fkColumnName="paymentApplicationTransactionId" fkSequence="1" updateRule="3" deleteRule="0" fkName="FK_TransactionProp_Transaction" pkName="PK__PaymentA__6D69827ED0A2757E" create="true" exported="true"/>
+        <importedKeys pkTableName="PaymentApplicationQuote" pkBaseName="paymentapplicationquote" pkColumnName="paymentApplicationQuoteId" fkTableName="PaymentApplicationTransaction" fkBaseName="paymentapplicationtransaction" fkColumnName="paymentApplicationQuoteId" fkSequence="1" updateRule="3" deleteRule="0" fkName="FK_Transaction_Quote" pkName="PK__PaymentA__5574300B4FCC324E" create="true" exported="false"/>
+        <importedKeys pkTableName="PaymentApplicationQuote" pkBaseName="paymentapplicationquote" pkColumnName="applicationId" fkTableName="PaymentApplicationTransaction" fkBaseName="paymentapplicationtransaction" fkColumnName="applicationId" fkSequence="2" updateRule="3" deleteRule="0" fkName="FK_Transaction_Quote" pkName="PK__PaymentA__5574300B4FCC324E" create="true" exported="false"/>
+        <importedKeys pkTableName="Payment" pkBaseName="payment" pkColumnName="paymentBatchId" fkTableName="PaymentApplicationTransaction" fkBaseName="paymentapplicationtransaction" fkColumnName="paymentBatchId" fkSequence="1" updateRule="3" deleteRule="0" fkName="FK_Transaction_Payment" pkName="PK__Payment__5F284A1D858095EB" create="true" exported="false"/>
+    </entities>
+    <entities>
+        <tableName>PaymentApplicationTransactionDetail</tableName>
+        <baseName>paymentapplicationtransactiondetail</baseName>
+        <allFieldSelection>true</allFieldSelection>
+        <create>true</create>
+        <selected>false</selected>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="String" fieldName="paymentapplicationtransactionid" columnSize="36" columnType="char" columnName="paymentApplicationTransactionId" autoincrement="false" ordinalPosition="2" columnDataType="1" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="String" fieldName="paymentapplicationquotefeedetailid" columnSize="36" columnType="char" columnName="paymentApplicationQuoteFeeDetailId" autoincrement="false" ordinalPosition="3" columnDataType="1" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="1" fieldType="String" fieldName="paymentapplicationtransactiondetailid" columnSize="36" columnType="char" columnName="paymentApplicationTransactionDetailId" autoincrement="false" ordinalPosition="1" columnDataType="1" unique="true"/>
+    </entities>
+    <entities>
+        <tableName>PaymentGateway</tableName>
+        <baseName>paymentgateway</baseName>
+        <allFieldSelection>true</allFieldSelection>
+        <create>true</create>
+        <selected>false</selected>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="gatewayname" columnSize="100" columnType="nvarchar" columnName="gatewayName" autoincrement="false" ordinalPosition="2" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="gatewaydescription" columnSize="100" columnType="nvarchar" columnName="gatewayDescription" autoincrement="false" ordinalPosition="3" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="1" fieldType="String" fieldName="paymentgatewayid" columnSize="36" columnType="char" columnName="paymentGatewayId" autoincrement="false" ordinalPosition="1" columnDataType="1" unique="true"/>
+        <exportedKeys pkTableName="PaymentGateway" pkBaseName="paymentgateway" pkColumnName="paymentGatewayId" fkTableName="Payment" fkBaseName="payment" fkColumnName="paymentGatewayId" fkSequence="1" updateRule="3" deleteRule="3" fkName="FK_Payment_Gateway" pkName="PK__PaymentG__2174AB31CBC54BFF" create="true" exported="true"/>
+    </entities>
+    <entities>
+        <tableName>PaymentStep</tableName>
+        <baseName>paymentstep</baseName>
+        <allFieldSelection>true</allFieldSelection>
+        <create>true</create>
+        <selected>false</selected>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="responsepaylod" columnSize="2000" columnType="nvarchar" columnName="responsePaylod" autoincrement="false" ordinalPosition="9" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.sql.Timestamp" fieldName="responsedatetime" columnSize="23" columnType="datetime" columnName="responseDateTime" autoincrement="false" ordinalPosition="10" columnDataType="93" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="0" fieldType="java.lang.String" fieldName="requesttype" columnSize="100" columnType="nvarchar" columnName="requestType" autoincrement="false" ordinalPosition="8" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="responsestatus" columnSize="36" columnType="nvarchar" columnName="responseStatus" autoincrement="false" ordinalPosition="13" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="responseexternalrefid" columnSize="36" columnType="nvarchar" columnName="responseExternalRefId" autoincrement="false" ordinalPosition="14" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="responsecode" columnSize="36" columnType="nvarchar" columnName="responseCode" autoincrement="false" ordinalPosition="12" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="responsemessage" columnSize="36" columnType="nvarchar" columnName="responseMessage" autoincrement="false" ordinalPosition="11" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="String" fieldName="paymentapplicationquoteid" columnSize="36" columnType="char" columnName="paymentApplicationQuoteId" autoincrement="false" ordinalPosition="2" columnDataType="1" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="String" fieldName="applicationid" columnSize="36" columnType="char" columnName="applicationId" autoincrement="false" ordinalPosition="3" columnDataType="1" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="1" fieldType="String" fieldName="paymentstepid" columnSize="36" columnType="char" columnName="paymentStepId" autoincrement="false" ordinalPosition="1" columnDataType="1" unique="true"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="userid" columnSize="36" columnType="nvarchar" columnName="userId" autoincrement="false" ordinalPosition="4" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="requestpaylod" columnSize="2000" columnType="nvarchar" columnName="requestPaylod" autoincrement="false" ordinalPosition="6" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="requesturlapi" columnSize="200" columnType="nvarchar" columnName="requestURLAPI" autoincrement="false" ordinalPosition="5" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.sql.Timestamp" fieldName="requestdatetime" columnSize="23" columnType="datetime" columnName="requestDateTime" autoincrement="false" ordinalPosition="7" columnDataType="93" unique="false"/>
+        <importedKeys pkTableName="PaymentApplicationQuote" pkBaseName="paymentapplicationquote" pkColumnName="applicationId" fkTableName="PaymentStep" fkBaseName="paymentstep" fkColumnName="applicationId" fkSequence="2" updateRule="3" deleteRule="0" fkName="FK_Step_Payment" pkName="PK__PaymentA__5574300B4FCC324E" create="true" exported="false"/>
+        <importedKeys pkTableName="PaymentUser" pkBaseName="paymentuser" pkColumnName="userId" fkTableName="PaymentStep" fkBaseName="paymentstep" fkColumnName="userId" fkSequence="1" updateRule="3" deleteRule="3" fkName="FK_Step_User" pkName="PK__PaymentU__CB9A1CFF18C756F9" create="true" exported="false"/>
+        <importedKeys pkTableName="PaymentApplicationQuote" pkBaseName="paymentapplicationquote" pkColumnName="paymentApplicationQuoteId" fkTableName="PaymentStep" fkBaseName="paymentstep" fkColumnName="paymentApplicationQuoteId" fkSequence="1" updateRule="3" deleteRule="0" fkName="FK_Step_Payment" pkName="PK__PaymentA__5574300B4FCC324E" create="true" exported="false"/>
+    </entities>
+    <entities>
+        <tableName>PaymentUser</tableName>
+        <baseName>paymentuser</baseName>
+        <allFieldSelection>true</allFieldSelection>
+        <create>true</create>
+        <selected>false</selected>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="email" columnSize="254" columnType="nvarchar" columnName="email" autoincrement="false" ordinalPosition="7" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="String" fieldName="nationalitycode" columnSize="3" columnType="char" columnName="nationalityCode" autoincrement="false" ordinalPosition="8" columnDataType="1" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="mobileno" columnSize="25" columnType="nvarchar" columnName="mobileNo" autoincrement="false" ordinalPosition="6" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="String" fieldName="emiratecode" columnSize="3" columnType="char" columnName="emirateCode" autoincrement="false" ordinalPosition="10" columnDataType="1" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="pobox" columnSize="50" columnType="nvarchar" columnName="poBox" autoincrement="false" ordinalPosition="11" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="true" pkPosition="0" fieldType="java.lang.String" fieldName="emiratesid" columnSize="36" columnType="nvarchar" columnName="emiratesId" autoincrement="false" ordinalPosition="9" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="0" fieldType="java.lang.String" fieldName="username" columnSize="100" columnType="nvarchar" columnName="userName" autoincrement="false" ordinalPosition="3" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="0" fieldType="java.lang.String" fieldName="fullnamear" columnSize="100" columnType="nvarchar" columnName="fullNameAr" autoincrement="false" ordinalPosition="5" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="0" fieldType="java.lang.String" fieldName="fullnameen" columnSize="100" columnType="nvarchar" columnName="fullNameEn" autoincrement="false" ordinalPosition="4" columnDataType="-9" unique="false"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="1" fieldType="java.lang.String" fieldName="userid" columnSize="36" columnType="nvarchar" columnName="userId" autoincrement="false" ordinalPosition="1" columnDataType="-9" unique="true"/>
+        <fieldList create="true" lob="false" nullable="false" pkPosition="0" fieldType="BitSet" fieldName="authenticated" columnSize="1" columnType="bit" columnName="authenticated" autoincrement="false" ordinalPosition="2" columnDataType="-7" unique="false"/>
+        <exportedKeys pkTableName="PaymentUser" pkBaseName="paymentuser" pkColumnName="userId" fkTableName="PaymentApplicationQuote" fkBaseName="paymentapplicationquote" fkColumnName="userId" fkSequence="1" updateRule="3" deleteRule="3" fkName="FK_Quote_User" pkName="PK__PaymentU__CB9A1CFF18C756F9" create="true" exported="true"/>
+        <exportedKeys pkTableName="PaymentUser" pkBaseName="paymentuser" pkColumnName="userId" fkTableName="PaymentStep" fkBaseName="paymentstep" fkColumnName="userId" fkSequence="1" updateRule="3" deleteRule="3" fkName="FK_Step_User" pkName="PK__PaymentU__CB9A1CFF18C756F9" create="true" exported="true"/>
+        <exportedKeys pkTableName="PaymentUser" pkBaseName="paymentuser" pkColumnName="userId" fkTableName="Payment" fkBaseName="payment" fkColumnName="userId" fkSequence="1" updateRule="3" deleteRule="3" fkName="FK_Payment_User" pkName="PK__PaymentU__CB9A1CFF18C756F9" create="true" exported="true"/>
     </entities>
     <fileTmplts>
         <allFileAttrSelected>true</allFileAttrSelected>
         <create>true</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="one-path" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name." value="factor.user.defined.subroutines.11.private.file.attributes.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_DB_TYPE" desc="db2, postgresql, oracle, sqlserver, mysql" value="postgresql" no="5"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_APP_IP" desc="Description" value="localhost" no="6"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_DB_IP" desc="Description" value="localhost" no="7"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_DB_PORT" desc="db2-50000, postgresql-5432, oracle-1521, sqlserver-1433, mysql-3306" value="5432" no="8"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_DB_USER" desc="db2-dbadm, postgresql-postgres, oracle-system, sqlserver-sa, mysql-myuser" value="postgres" no="9"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_DB_NAME" desc="db2-MYDB, postgresql-postgres, oracle-ORCLPDB1, sqlserver-Express, mysql-mydb" value="postgres" no="10"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_DB_PASS" desc="Description" value="P@ssw0rd" no="11"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_APP_PKG" desc="Description" value="realworld-api-quarkus" no="12"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_XXXXX" desc="Description" value="VALUE" no="13"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.user.defined.subroutines.11.private.file.attributes.ftl</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.11.private.file.attributes.ftl</path>
+        <generatedType>one</generatedType>
+        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output/test</generatedPath>
+        <name>test.ftl</name>
+        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/multidatabase/test.ftl</path>
         <selected>false</selected>
-        <size>3203</size>
+        <size>1780</size>
     </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor-config-example.xml</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor-config-example.xml</path>
-        <selected>false</selected>
-        <size>52220</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="one-path" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name." value="factor.user.defined.subroutines.9.public.system.datatype.mapping.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.user.defined.subroutines.9.public.system.datatype.mapping.ftl</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.9.public.system.datatype.mapping.ftl</path>
-        <selected>false</selected>
-        <size>4614</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="one-path" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name." value="factor.user.defined.subroutines.10.public.attributes.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.user.defined.subroutines.10.public.attributes.ftl</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.10.public.attributes.ftl</path>
-        <selected>false</selected>
-        <size>3138</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="copy-path" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="copy" no="2"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.user.defined.subroutines.6.private.system.copy.ftl</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.6.private.system.copy.ftl</path>
-        <selected>false</selected>
-        <size>2150</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="one-path" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name." value="factor.user.defined.subroutines.7.private.system.one.change-filename.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.user.defined.subroutines.7.private.system.one.ftl</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.7.private.system.one.ftl</path>
-        <selected>false</selected>
-        <size>3018</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="many-path/main/java/[class]/[table]/[instance]/test/[base]" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="many" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name." value="factor.user.defined.subroutines.8.private.system.many.[table].[base].[class].[instance].txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_JAVA_PACKAGE" desc="Private System placeholder for define package name and auto create directory based on value definition" value="id.co.factor.[class].[table].[instance].[base]" no="5"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.user.defined.subroutines.8.private.system.many.ftl</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.8.private.system.many.ftl</path>
-        <selected>false</selected>
-        <size>4788</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="user-defined-subroutines" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.user.defined.subroutines.2.generation.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.user.defined.subroutines.2.generation.ftl</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.2.generation.ftl</path>
-        <selected>false</selected>
-        <size>6883</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="user-defined-subroutines" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.user.defined.subroutines.3.draftTemplate.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.user.defined.subroutines.3.draftTemplate.ftl</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.3.draftTemplate.ftl</path>
-        <selected>false</selected>
-        <size>5489</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.1.ftl.outputformat.comment.txt" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="3"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.directives.1.ftl.outputformat.comment.ftl</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.1.ftl.outputformat.comment.ftl</path>
-        <selected>false</selected>
-        <size>2950</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="predefined-subroutines" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.predefined.subroutines.1.string.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.predefined.subroutines.1.string.ftl</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.predefined.subroutines.1.string.ftl</path>
-        <selected>false</selected>
-        <size>14148</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="predefined-subroutines" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.predefined.subroutines.2.booleans.date.time.numbers.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.predefined.subroutines.2.booleans.date.time.numbers.ftl</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.predefined.subroutines.2.booleans.date.time.numbers.ftl</path>
-        <selected>false</selected>
-        <size>11017</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="predefined-subroutines" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.predefined.subroutines.3.loop.hashes.specialVariable.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.predefined.subroutines.3.loop.hashes.specialVariable.ftl</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.predefined.subroutines.3.loop.hashes.specialVariable.ftl</path>
-        <selected>false</selected>
-        <size>7334</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="predefined-subroutines" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.predefined.subroutines.4.sequences.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.predefined.subroutines.4.sequences.ftl</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.predefined.subroutines.4.sequences.ftl</path>
-        <selected>false</selected>
-        <size>8783</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="user-defined-subroutines" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.user.defined.subroutines.1.database.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.user.defined.subroutines.1.database.ftl</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.1.database.ftl</path>
-        <selected>false</selected>
-        <size>10229</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="user-defined-subroutines" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.user.defined.subroutines.4.entity.field.pk.fk.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.user.defined.subroutines.4.entity.field.pk.fk.ftl</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.4.entity.field.pk.fk.ftl</path>
-        <selected>false</selected>
-        <size>24384</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="user-defined-subroutines" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.user.defined.subroutines.5.fileTemplate.attributes.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.user.defined.subroutines.5.fileTemplate.attributes.ftl</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.5.fileTemplate.attributes.ftl</path>
-        <selected>false</selected>
-        <size>3489</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="directive" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.2.assign.attempt.recover.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.directives.2.assign.attempt.recover.ftl</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.2.assign.attempt.recover.ftl</path>
-        <selected>false</selected>
-        <size>2582</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="directive" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.3.compress.escape.flush.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.directives.3.compress.escape.flush.ftl</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.3.compress.escape.flush.ftl</path>
-        <selected>false</selected>
-        <size>2382</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="directive" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.4.function.return.global.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.directives.4.function.return.global.ftl</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.4.function.return.global.ftl</path>
-        <selected>false</selected>
-        <size>3198</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="directive" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.5.if.elseif.else.import.include.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.directives.5.if.elseif.else.import.include.ftl</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.5.if.elseif.else.import.include.ftl</path>
-        <selected>false</selected>
-        <size>2728</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="directive" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.6.list.else.items.sep.break.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.directives.6.list.else.items.sep.break.ftl</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.6.list.else.items.sep.break.ftl</path>
-        <selected>false</selected>
-        <size>3223</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="directive" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.7.local.macro.nested.return.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.directives.7.local.macro.nested.return.ftl</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.7.local.macro.nested.return.ftl</path>
-        <selected>false</selected>
-        <size>7261</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="directive" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.8.stop.switch.case.default.break.trim.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.directives.8.stop.switch.case.default.break.trim.ftl</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.8.stop.switch.case.default.break.trim.ftl</path>
-        <selected>false</selected>
-        <size>2648</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="directive" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.9.html_escape.setting.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.directives.9.html_escape.setting.ftl</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.9.html_escape.setting.ftl</path>
-        <selected>false</selected>
-        <size>3021</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>lib</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/lib</path>
-        <selected>false</selected>
-        <size>128</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>true</create>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>README.md</name>
-        <path>/Users/macddl01/Laboratorium/ws-myappgen/firmansyah.factor.starterkit.playground/factor.templates.example/README.md</path>
-        <selected>false</selected>
-        <size>2451</size>
-    </fileTmplts>
-    <filePublicAttrs>
-        <entry>
-            <key>PUB_SYS_DTM@double</key>
-            <value>
-                <name>PUB_SYS_DTM@double</name>
-                <no>8</no>
-                <value>double</value>
-                <desc>Numeric</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_DB_TYPE</key>
-            <value>
-                <name>PUB_DB_TYPE</name>
-                <no>29</no>
-                <value>postgresql</value>
-                <desc>db2, postgresql, oracle, sqlserver, mysql</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@date</key>
-            <value>
-                <name>PUB_SYS_DTM@date</name>
-                <no>14</no>
-                <value>java.sql.Date</value>
-                <desc>Date/Time</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@timestamp</key>
-            <value>
-                <name>PUB_SYS_DTM@timestamp</name>
-                <no>16</no>
-                <value>java.time.LocalDateTime</value>
-                <desc>Date/Time</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@bytea</key>
-            <value>
-                <name>PUB_SYS_DTM@bytea</name>
-                <no>13</no>
-                <value>byte</value>
-                <desc>Binary</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@cidr</key>
-            <value>
-                <name>PUB_SYS_DTM@cidr</name>
-                <no>23</no>
-                <value>String</value>
-                <desc>NetworkAddress</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@tsquery</key>
-            <value>
-                <name>PUB_SYS_DTM@tsquery</name>
-                <no>22</no>
-                <value>String</value>
-                <desc>Text</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@text</key>
-            <value>
-                <name>PUB_SYS_DTM@text</name>
-                <no>12</no>
-                <value>String</value>
-                <desc>Character</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@interval</key>
-            <value>
-                <name>PUB_SYS_DTM@interval</name>
-                <no>17</no>
-                <value>String</value>
-                <desc>Date/Time</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@varchar</key>
-            <value>
-                <name>PUB_SYS_DTM@varchar</name>
-                <no>11</no>
-                <value>String</value>
-                <desc>Character</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_APP_PKG</key>
-            <value>
-                <name>PUB_APP_PKG</name>
-                <no>36</no>
-                <value>realworld-api-quarkus</value>
-                <desc>Description</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@enum</key>
-            <value>
-                <name>PUB_SYS_DTM@enum</name>
-                <no>19</no>
-                <value>String</value>
-                <desc>Enum</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@jsonb</key>
-            <value>
-                <name>PUB_SYS_DTM@jsonb</name>
-                <no>28</no>
-                <value>String</value>
-                <desc>JSON</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@uuid</key>
-            <value>
-                <name>PUB_SYS_DTM@uuid</name>
-                <no>26</no>
-                <value>java.util.UUID</value>
-                <desc>UUID</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_DB_IP</key>
-            <value>
-                <name>PUB_DB_IP</name>
-                <no>31</no>
-                <value>localhost</value>
-                <desc>Description</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@macaddr</key>
-            <value>
-                <name>PUB_SYS_DTM@macaddr</name>
-                <no>25</no>
-                <value>String</value>
-                <desc>NetworkAddress</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@bigint</key>
-            <value>
-                <name>PUB_SYS_DTM@bigint</name>
-                <no>4</no>
-                <value>long</value>
-                <desc>Numeric</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@boolean</key>
-            <value>
-                <name>PUB_SYS_DTM@boolean</name>
-                <no>18</no>
-                <value>Boolean</value>
-                <desc>Boolean</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_APP_IP</key>
-            <value>
-                <name>PUB_APP_IP</name>
-                <no>30</no>
-                <value>localhost</value>
-                <desc>Description</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_DB_PASS</key>
-            <value>
-                <name>PUB_DB_PASS</name>
-                <no>35</no>
-                <value>P@ssw0rd</value>
-                <desc>Description</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@bit</key>
-            <value>
-                <name>PUB_SYS_DTM@bit</name>
-                <no>20</no>
-                <value>BitSet</value>
-                <desc>Bit</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@integer</key>
-            <value>
-                <name>PUB_SYS_DTM@integer</name>
-                <no>3</no>
-                <value>int</value>
-                <desc>Numeric</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@numeric</key>
-            <value>
-                <name>PUB_SYS_DTM@numeric</name>
-                <no>6</no>
-                <value>BigDecimal</value>
-                <desc>Numeric</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_XXXXX</key>
-            <value>
-                <name>PUB_XXXXX</name>
-                <no>37</no>
-                <value>VALUE</value>
-                <desc>Description</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@DB_DT_TYPE</key>
-            <value>
-                <name>PUB_SYS_DTM@DB_DT_TYPE</name>
-                <no>1</no>
-                <value>PL_DT_TYPE</value>
-                <desc>Description</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@char</key>
-            <value>
-                <name>PUB_SYS_DTM@char</name>
-                <no>10</no>
-                <value>String</value>
-                <desc>Character</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@time</key>
-            <value>
-                <name>PUB_SYS_DTM@time</name>
-                <no>15</no>
-                <value>java.sql.Time</value>
-                <desc>Date/Time</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@inet</key>
-            <value>
-                <name>PUB_SYS_DTM@inet</name>
-                <no>24</no>
-                <value>String</value>
-                <desc>NetworkAddress</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_DB_USER</key>
-            <value>
-                <name>PUB_DB_USER</name>
-                <no>33</no>
-                <value>postgres</value>
-                <desc>db2-dbadm, postgresql-postgres, oracle-system, sqlserver-sa, mysql-myuser</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@smallint</key>
-            <value>
-                <name>PUB_SYS_DTM@smallint</name>
-                <no>2</no>
-                <value>short</value>
-                <desc>Numeric</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_DB_PORT</key>
-            <value>
-                <name>PUB_DB_PORT</name>
-                <no>32</no>
-                <value>5432</value>
-                <desc>db2-50000, postgresql-5432, oracle-1521, sqlserver-1433, mysql-3306</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@tsvector</key>
-            <value>
-                <name>PUB_SYS_DTM@tsvector</name>
-                <no>21</no>
-                <value>String</value>
-                <desc>Text</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@json</key>
-            <value>
-                <name>PUB_SYS_DTM@json</name>
-                <no>27</no>
-                <value>String</value>
-                <desc>JSON</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@decimal</key>
-            <value>
-                <name>PUB_SYS_DTM@decimal</name>
-                <no>5</no>
-                <value>BigDecimal</value>
-                <desc>Numeric</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@real</key>
-            <value>
-                <name>PUB_SYS_DTM@real</name>
-                <no>7</no>
-                <value>float</value>
-                <desc>Numeric</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@character</key>
-            <value>
-                <name>PUB_SYS_DTM@character</name>
-                <no>9</no>
-                <value>String</value>
-                <desc>Character</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_DB_NAME</key>
-            <value>
-                <name>PUB_DB_NAME</name>
-                <no>34</no>
-                <value>postgres</value>
-                <desc>db2-MYDB, postgresql-postgres, oracle-ORCLPDB1, sqlserver-Express, mysql-mydb</desc>
-            </value>
-        </entry>
-    </filePublicAttrs>
+    <filePublicAttrs/>
     <fileDefaultAttrs/>
     <comment>TEST COMMENT ADDITIONAL</comment>
     <draftTemplate>

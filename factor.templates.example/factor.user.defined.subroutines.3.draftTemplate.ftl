@@ -93,3 +93,71 @@ Expression or Script   										-> RESULT
 <#--
 <#noparse>${adv.draftTemplate.valueModified()}</#noparse>	->	${adv.draftTemplate.valueModified()}
 -->
+
+
+=====================================================================================================================
+D. AI Prompts Generation - Factor Subroutines ---------------------------------------------------------------------------
+=====================================================================================================================
+
+Here's a summarized explanation of your FreeMarker data model usage (`adv` object structure), grouped by category:
+
+---
+
+## ✅ **A. Accessing Data (Read-Only Use of FreeMarker Expressions)**
+
+### 🔹 **Direct Field Access with Defaults & Conversions**
+
+You are safely accessing fields of `adv.draftTemplate` using FreeMarker expressions:
+
+| Expression                         | Purpose                                             |
+| ---------------------------------- | --------------------------------------------------- |
+| `${adv.draftTemplate.appDir!''}`   | Displays `appDir`, or empty string if null.         |
+| `${adv.draftTemplate.create?c}`    | Displays `create` boolean as `"true"` or `"false"`. |
+| `${adv.draftTemplate.draftDir!''}` | Displays `draftDir`, or empty string if null.       |
+
+---
+
+### 🔹 **Iterating a List: `draftTemplateKeyValue`**
+
+You're looping over a list and printing multiple fields:
+
+```ftl
+<#list adv.draftTemplateKeyValue as dtkv>
+  ${dtkv.create?c}
+  ${dtkv.name}
+  ${dtkv.no}
+  ${dtkv.selected?c}
+  ${dtkv.value}
+</#list>
+```
+
+| Field                 | Description                                     |
+| --------------------- | ----------------------------------------------- |
+| `create?c`            | Coerces boolean `create` to `"true"`/`"false"`. |
+| `name`, `no`, `value` | Regular string/number values.                   |
+| `selected?c`          | Another boolean field rendered as string.       |
+
+---
+
+## ⚠️ **B. Mutating Data via Java Method Calls (Not Recommended)**
+
+You're referencing **Java method calls inside FTL**, which is generally **discouraged**:
+
+| Expression                                     | Meaning                                 |
+| ---------------------------------------------- | --------------------------------------- |
+| `${adv.draftTemplate.setAppDir('appDir')}`     | Calls Java setter method (side effect). |
+| `${adv.draftTemplate.setCreate(true)}`         | Sets a boolean value.                   |
+| `${adv.draftTemplate.setDraftDir('draftDir')}` | Sets another field.                     |
+
+> ⚠️ **Warning:** FreeMarker is meant for **presentation (read-only)**, not modifying Java objects. Method calls with side effects (like setters) are **not recommended** inside `.ftl` files.
+
+---
+
+## 📌 Summary
+
+| Section                  | Description                                                                                                                             |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
+| **A. Read-Only Access**  | Safely extracts values from Java objects and lists using FreeMarker syntax with defaults and formatting (`!''`, `?c`). ✅ Best practice. |
+| **B. Java Method Calls** | Invokes Java methods (e.g., `setXXX`) from the template. ⚠️ Not recommended – violates separation of concerns.                          |
+
+Let me know if you want help refactoring part B into safer practices.
