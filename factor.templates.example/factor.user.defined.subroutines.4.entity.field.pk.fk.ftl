@@ -39,6 +39,20 @@ Expression or Script   										-> RESULT
                 hasLob  			: ${i.hasLob()?c}
                 toStringStatement   : ${i.toStringStatement}
                 
+                
+                --- Derived Methods ---
+                getFieldListExceptPrimaryKey             : ${i.getFieldListExceptPrimaryKey()?join(", ")}
+                getFieldListExceptPrimaryKeyAndForeignKey: ${i.getFieldListExceptPrimaryKeyAndForeignKey()?join(", ")}
+                getForeignKeyFieldList                   : ${i.getForeignKeyFieldList()?join(", ")}
+                getPrimaryKeyCount                       : ${i.getPrimaryKeyCount()}
+                getForeignKeyCount                       : ${i.getForeignKeyCount()}
+                hasPrimaryKey                            : ${i.hasPrimaryKey()?c}
+                hasPrimaryKeySingle                      : ${i.hasPrimaryKeySingle()?c}
+                hasPrimaryKeyCompound                    : ${i.hasPrimaryKeyCompound()?c}
+                hasForeignKey                            : ${i.hasForeignKey()?c}
+                hasForeignKeySingle                      : ${i.hasForeignKeySingle()?c}
+                hasForeignKeyCompound                    : ${i.hasForeignKeyCompound()?c}
+                
                 exportedKeys      :
                 <#list i.exportedKeys as m>
                     pkTableName      : ${m.pkTableName}
@@ -394,7 +408,7 @@ Expression or Script   										-> RESULT
 =====================================================================================================================
 B. AI Prompts Entity, Field, PK, FK - Factor Subroutines -----------------------------------------------------------------------
 =====================================================================================================================
-
+<#--
 To make this FreeMarker data model easily understandable and usable by AI models like ChatGPT, DeepSeek, Copilot, and Gemini, I will convert it into a structured, descriptive format. This format will clearly list all attributes and their types, including nested objects and arrays.
 
 Here's an AI-friendly prompt format:
@@ -542,3 +556,4 @@ Each item `i` in `adv.entities` is an `Entity` object with the following attribu
 The AI can then easily parse the structured data to identify the `Entity` with `tableName` "Users", access its `primaryKeyFieldList`, and extract the `fieldName` and `fieldType` for each `Field` object within that list.
 
 This detailed breakdown ensures that the AI understands the hierarchy, data types, and purpose of each attribute, making it robust for various code generation or data analysis tasks.
+-->
